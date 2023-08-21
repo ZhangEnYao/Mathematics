@@ -1,0 +1,141 @@
+\Definition{
+	Sentence Connective
+}{
+	A term or phrase used to make a larger sentence from two smaller ones.
+	\ExempliGratia{and, or, if \dots then, if and only if, not}
+}
+\Definition{
+	Atomic(Simple) Sentence, Compound Sentence
+}{
+	\Notion{Atomic} sentence is a sentence that contains no sentence connectives;
+	\Notion{Compound} sentence is a sentence containing at least one sentence connective.
+}
+\Remark{
+	Compound Sentences are sentences built from shorter sentences by means of sentence connectives.
+}
+\Note{
+	\Notion{Sentence logic} can be developed without considering the interior structure of atomic sentences.
+	\Notion{Symbolic logic} is the modern logic that includes sentential logic and predicate logic.
+}
+\Definition{
+	Truth-Value
+}{
+	There are two truth-values—namely, true and false.
+}
+\Remark{
+	Every sentence in sentential logic has a definite truth-value, and the truth-value of every compound sentence is a function of the truth-value of its component (or atomic) sentences.
+}
+\Definition{
+	Truth Condition
+}{
+	The conditions under which a statement is true are called its truth conditions.
+}
+\Definition{
+	Truth-Function
+}{
+	A function that takes one or more truth-values as its input and returns a single truth-value as its output.
+}
+\Definition{
+	Truth-Functional Operator
+}{
+	An operator is truth-functional if the truth-values of the sentences formed by its use are determined by the truth-values of the sentences it connects.
+	Similarly, sentence forms constructed by means of truth-functional sentence connectives are such that the truth-values of their substitution instances are determined by the truth-values of their component sentences.
+}
+\Remark{
+	Our system of logic has five truth-functional operators.
+	One operator, not, takes only one input; the other four, and, or, if {\dots} then, and if and only if, take two.
+}
+\Remark{
+	The meaning of a logical operator is given by its truth conditions.
+}
+\Definition{
+	Truth Table
+}{
+	A table giving the truth-values of all possible substitution instances of a given sentence form, in terms of the possible truth-values of the component sentences of these substitution instances.
+}
+\Remark{
+	A statement does not have a truth table;
+	a statement has a line in a truth table, depending on the truth-value of its component statements.
+	Truth tables are not given for statements but only for statement forms.
+}
+\Definition{
+	Conjunction
+}{
+	In sentential logic, a compound sentence (or sentence form) whose main connective is dot connective.
+	\Notion{dot} connective is “and,” “and on the contrary,” "also," “although,” “both \dots and,” “but,” “despite (in spite of) the fact that,” “however,” “on the other hand,” “still,” "while,” “yet,” or a similar term.
+	\Notion{Conjunct} is one of the sentences joined together by dot connective.
+}
+\Definition{
+	Dot Operator
+}{
+	Let $T$ and $F$ be truth-value true and false seperately.
+	The dot operator is the set $\{((T, T), T), ((T, F), F), ((F, T), F), ((F, F), F)\}$.
+}
+\Proposition{
+}{
+	The dot is commutative.
+}{
+	Let $P$, $Q$ be statement.\\
+	\LogicProof{
+		\LogicProofStatement
+		{	\ConditionalProofArray{ImplicationPremise}{1.}
+		}{	$P \cdot Q$
+		}{	Assumed Premise
+		}
+		\LogicProofStatement
+		{	2.
+		}{	$P$
+		}{	1
+		}
+		\LogicProofStatement
+		{	3.
+		}{	$Q \cdot P$
+		}{	2
+		}
+		\LogicProofStatement
+		{	4.
+		}{	$(P \cdot Q) \implies (Q \cdot P)$
+		}{	\ConditionalProofArray{ImplicationConclusion}{1, 3, Conditional Proof}
+		}
+		\LogicProofStatement
+		{	\ConditionalProofArray{ConversePremise}{5.}
+		}{	$Q \cdot P$
+		}{	Assumed Premise
+		}
+		\LogicProofStatement
+		{	6.
+		}{	$P$
+		}{	5
+		}
+		\LogicProofStatement
+		{	7.
+		}{	$P \cdot Q$
+		}{	6
+		}
+		\LogicProofStatement
+		{	8.
+		}{	$(Q \cdot P) \implies (P \cdot Q)$
+		}{	\ConditionalProofArray{ConverseConclusion}{5, 7, Conditional Proof}
+		}
+	}\\
+	\ConditionalProofArrayImplement{ImplicationPremise}{ImplicationConclusion}{2.3}
+	\ConditionalProofArrayImplement{ConversePremise}{ConverseConclusion}{2.3}
+}
+\Definition{
+	Logically Equivalent
+}{
+	A sentence $p$ is logically equivalent to a sentence $q$ if and only if $p$ $\equiv$ $q$ is a tautology.
+}
+\Remark{
+	$p$ and $q$ have the same truth-values in every line of the truth table.
+}
+\Algorithm{
+	Test of a Proposed Symbolization
+}{
+	If it is possible for your proposed symbolization and the sentence in natural language would have different truth-values under the same circumstances, the proposed symbolization is not an adequate translation.
+}
+\Algorithm{
+	Test of the Truth-Functional Property of a Connective
+}{
+	If a connective is truth-functional, you will never be able to describe situations where in one case the sentence is true and in the other the sentence is false and yet the truth-value of the component sentence or sentences is the same in both cases.
+}

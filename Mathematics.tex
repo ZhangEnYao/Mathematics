@@ -1,0 +1,26 @@
+\documentclass{book}
+
+% Packages
+\input{packages}
+% Environments
+\input{environments}
+% Domains
+\input{domains}
+% Cover
+\input{Cover}
+
+% Document
+\begin{document}
+% Cover
+\maketitle
+% Content
+\tableofcontents
+\part{Logic}
+	\chapter{Argument}
+		\section{Notion}
+		\include*{documents/logic/arguments/notions}
+	\chapter{Sentential Logic}
+		\section{Notion}
+		\include*{documents/logic/sentential_logic/notions}
+\part{Set Theory}
+\end{document}

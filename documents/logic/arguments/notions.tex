@@ -1,0 +1,188 @@
+\Definition{
+	Sentence
+}{
+	Undefined object.
+}
+\Definition{
+	Statement
+}{
+	The use of a sentence that has a definite, fixed truth-value.
+	The \Notion{sentences} in an argument must express statements—that is, say something that is either true or false.
+}
+\Definition{
+	Sentence Constant
+}{
+	A symbol abbreviating an sentence in natural language, atomic or compound.
+}
+\Definition{
+	Statement Variable
+}{
+	A symbol that represents no statement and thus has no truth-value but for which statements can be substituted;
+	what does have a truth-value is a statement we substitute for it, 
+	The truth-value of the statement substituted for the variable will thus vary according to which statement is substituted.
+}
+\Definition{
+	Substitution
+}{
+	An operation performed by putting a statement in place of a variable.
+}
+\Remark{
+	We obtain statements from statement forms by substitution.
+}
+\Assumption{
+}{
+	All statements have a fixed \Notion{truth-value}—that is, are either true or false.
+}
+\Remark{
+	A sentence can be used to make different statements, depending on circumstances.
+}
+\Definition{
+	Argument
+}{
+	A set of sentences, one of which, the conclusion, is claimed to be supported by the others, the premises.
+	The \Notion{premises} are the reasons given in support of an argument’s conclusion.
+	The \Notion{conclusion} is the statement in an argument that is argued for on the basis of the argument’s premises.
+}
+\Remark{
+	Not just any group of sentences makes an argument.
+}
+\Definition{
+	Argument Form
+}{
+	Informally, the logical structure of an argument.
+	Formally, a group of sentence forms, all of whose substitution instances are arguments.
+}
+\Definition{
+	(Deductively) Valid
+}{
+	An argument is \Notion{valid} if and only if it is not possible for all of its premises to be true and its conclusion false.
+}
+\Theorem{
+}{
+	If all premises of a valid argument are true, then its conclusion must be true. 
+}{
+	Let $P$ be all premises of a valid argument are true and $C$ be its conclusion must be true.\\
+	\LogicProof{
+		\LogicProofStatement
+		{	1.
+		}{	$P$
+		}{	Premise
+		}
+		\LogicProofStatement
+		{	2.
+		}{	$\neg( {P} \land \neg{Q} )$
+		}{	Definition: valid argument
+		}
+		\LogicProofStatement
+		{	3.
+		}{	$\neg{P} \lor {Q}$
+		}{	2
+		}
+		\LogicProofStatement
+		{	4.
+		}{	$Q$
+		}{	1, 3
+		}
+	}\\
+}
+\Corollary{
+}{
+	The conclusion of a valid argument follows logically from the premises.
+}{
+	Obviously.
+}
+\Note{
+	The truth of the premises of a valid argument guarantees the truth of its conclusion.
+}
+\Remark{
+	If all you know about an argument is that it is valid, that alone tells you nothing about whether the premises are true or the conclusion is true.
+	From the mere fact that an argument is invalid you can draw no conclusion whatsoever about the truth or falsity of the premises or the conclusion.
+}
+\Definition{
+	Inductive Argument
+}{
+	An argument that is not valid but whose premises provide some measure of support for its conclusion.
+}
+\Remark{
+	It is possible for the premises of a strong inductive argument to be true and yet the conclusion be false.
+}
+\Note{
+	An inductively strong argument does not guarantee that if its premises are true, then its conclusion also will be true, it does make its conclusion more probable.
+}
+\Definition{
+	Sound Argument
+}{
+	An argument that is valid and has all true premises.
+}
+\Theorem{
+}{
+	It is not possible that a deductively valid argument be sound, yet have a false conclusion.
+}{
+	Let $S$ be a deductively valid argument is sound $P$ be all premises are true and $C$ be the conclusion is true.\\
+	\LogicProof{
+		\LogicProofStatement
+		{	1.
+		}{	${S} \land \neg{C}$
+		}{	Assumed Premise
+		}
+		\LogicProofStatement
+		{	2.
+		}{	${P} \implies {C} \land {P}$
+		}{	Definition: Sound
+		}
+		\LogicProofStatement
+		{	3.
+		}{	$C$
+		}{	2
+		}
+		\LogicProofStatement
+		{	4.
+		}{	$( {S} \land \neg{C} ) \land {C}$
+		}{	1, 3
+		}
+		\LogicProofStatement
+		{	5.
+		}{	${S} \land ( \neg{C} \land {C} )$
+		}{	4
+		}
+		\LogicProofStatement
+		{	6.
+		}{	$\neg( {S} \land \neg{C} )$
+		}{	5, Indirect Proof
+		}
+	}\\
+}
+\Definition{
+	Consistent
+}{
+	A set of statements is consistent if and only if it is possible for all the statements to be true.
+}
+\Theorem{
+}{
+	If an argument is valid, then it is not possible for its premises to be true and its conclusion false.
+}{
+	Let $V$ be an argument is valid, $P$ be all premises are true and $C$ be the conclusion is true.\\
+	\LogicProof{
+		\LogicProofStatement
+		{	1.
+		}{	${P} \implies {Q}$
+		}{	Definition: Valid Argument
+		}
+		\LogicProofStatement
+		{	2.
+		}{	$\neg{P} \lor {Q}$
+		}{	1
+		}
+		\LogicProofStatement
+		{	3.
+		}{	$\neg( {P} \land \neg{Q} )$
+		}{	2
+		}		
+	}\\
+}
+\Corollary{
+}{
+	An argument is valid if and only if it is inconsistent to say that all its premises are true and its conclusion is false.
+}{
+	Obviously.
+}
