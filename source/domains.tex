@@ -7,104 +7,104 @@
 	e.g., {#1}%
 }
 \NewDocumentCommand{\Instance}{ m m }{%
-	\begin{instance}\textbf{\emph{#1}}\\
-		\normalfont{#2}
-	\end{instance}
+	\begin{instance}\textbf{\emph{#1}}\\%
+		\normalfont{#2}%
+	\end{instance}%
 }
 % Proof
 \NewDocumentCommand{\LogicProof}{ m }{%
-	\begin{tabular}{ l l l }
-		#1
-	\end{tabular}
+	\begin{tabular}{ l l l }%
+		#1%
+	\end{tabular}%
 }
 \NewDocumentCommand{\LogicProofStatement}{ m m m }{%
 	{#1} & {#2} & {#3}\\%
 }
 \newcommand{\ConditionalProofArray}[3][]{%
-  	\tikz[remember picture, baseline=({#2}.base)]
-    	\node[minimum size=0pt,inner sep=0pt, {#1}]({#2}){{#3}};
+  	\tikz[remember picture, baseline=({#2}.base)]%
+    	\node[minimum size=0pt,inner sep=0pt, {#1}]({#2}){{#3}};%
 }
 \NewDocumentCommand{\ConditionalProofArrayImplement}{ m m m }{%
-    \begin{tikzpicture}[remember picture, overlay]
-        \draw[stealth-] ({#1}) -- ++(-{#3}em,0) |- ({#2}.north east);
-    \end{tikzpicture}
+    \begin{tikzpicture}[remember picture, overlay]%
+        \draw[stealth-] ({#1}) -- ++(-{#3}em,0) |- ({#2}.north east);%
+    \end{tikzpicture}%
 }
 % Definition, Theorem, Remark, ...
 \NewDocumentCommand{\Axiom}{ m m }{%
-	\begin{axiom}\textbf{\emph{#1}}\\
-		\normalfont{#2}
-	\end{axiom}
+	\begin{axiom}\textbf{\emph{#1}}\\%
+		\normalfont{#2}%
+	\end{axiom}%
 }
 \NewDocumentCommand{\Definition}{ m m }{%
-	\begin{definition}\textbf{\emph{#1}}\\
-		\normalfont{#2}
-	\end{definition}
+	\begin{definition}\textbf{\emph{#1}}\\%
+		\normalfont{#2}%
+	\end{definition}%
 }
 \NewDocumentCommand{\Assumption}{ m m }{%
-	\begin{assumption}\textbf{\emph{#1}}\\
-		\normalfont{#2}
-	\end{assumption}
+	\begin{assumption}\textbf{\emph{#1}}\\%
+		\normalfont{#2}%
+	\end{assumption}%
 }
 \NewDocumentCommand{\Algorithm}{ m m }{%
-	\begin{algorithm}\textbf{\emph{#1}}\\
-		\normalfont{#2}
-	\end{algorithm}
+	\begin{algorithm}\textbf{\emph{#1}}\\%
+		\normalfont{#2}%
+	\end{algorithm}%
 }
 \NewDocumentCommand{\Theorem}{ m m m }{%
-	\begin{theorem}\textbf{\emph{#1}}\\
-		\normalfont{#2}
-	\end{theorem}
-	\begin{proof}
-		{#3}
-	\end{proof}
+	\begin{theorem}\textbf{\emph{#1}}\\%
+		\normalfont{#2}%
+	\end{theorem}%
+	\begin{proof}%
+		{#3}%
+	\end{proof}%
 }
 \NewDocumentCommand{\Proposition}{ m m m }{%
-	\begin{proposition}\textbf{\emph{#1}}\\
-		\normalfont{#2}
-	\end{proposition}
-	\begin{proof}
-		{#3}
-	\end{proof}
+	\begin{proposition}\textbf{\emph{#1}}\\%
+		\normalfont{#2}%
+	\end{proposition}%
+	\begin{proof}%
+		{#3}%
+	\end{proof}%
 }
 \NewDocumentCommand{\Property}{ m m m }{%
-	\begin{property}\textbf{\emph{#1}}\\
-		\normalfont{#2}
-	\end{property}
-	\begin{proof}
-		{#3}
-	\end{proof}
+	\begin{property}\textbf{\emph{#1}}\\%
+		\normalfont{#2}%
+	\end{property}%
+	\begin{proof}%
+		{#3}%
+	\end{proof}%
 }
 \NewDocumentCommand{\Claim}{ m m m }{%
-	\begin{claim}\textbf{\emph{#1}}\\
-		\normalfont{#2}
-	\end{claim}
-	\begin{proof}
-		{#3}
-	\end{proof}
+	\begin{claim}\textbf{\emph{#1}}\\%
+		\normalfont{#2}%
+	\end{claim}%
+	\begin{proof}%
+		{#3}%
+	\end{proof}%
 }
 \NewDocumentCommand{\Lemma}{ m m m }{%
-	\begin{lemma}\textbf{\emph{#1}}\\
-		\normalfont{#2}
-	\end{lemma}
-	\begin{proof}
-		{#3}
-	\end{proof}
+	\begin{lemma}\textbf{\emph{#1}}\\%
+		\normalfont{#2}%
+	\end{lemma}%
+	\begin{proof}%
+		{#3}%
+	\end{proof}%
 }
 \NewDocumentCommand{\Corollary}{ m m m }{%
-	\begin{corollary}\textbf{\emph{#1}}\\
-		\normalfont{#2}
-	\end{corollary}
-	\begin{proof}
-		{#3}
-	\end{proof}
+	\begin{corollary}\textbf{\emph{#1}}\\%
+		\normalfont{#2}%
+	\end{corollary}%
+	\begin{proof}%
+		{#3}%
+	\end{proof}%
 }
 \NewDocumentCommand{\Remark}{ m }{%
-	\begin{remark}
-		\small{#1}
-	\end{remark}
+	\begin{remark}%
+		\small{#1}%
+	\end{remark}%
 }
 \NewDocumentCommand{\Note}{ m }{%
-	\begin{note}
-		\small{#1}
-	\end{note}
+	\begin{note}%
+		\small{#1}%
+	\end{note}%
 }

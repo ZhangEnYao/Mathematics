@@ -1,4 +1,27 @@
 \Definition{
+	Metalanguage
+}{
+	The language in which we talk about another language.
+}
+\Definition{
+	Object Language
+}{
+	The language we are studying.
+}
+\Remark{
+	The natural language is our metalanguage, and sentential logic is our object language.
+}
+\Definition{
+	Compound Sentence
+}{
+	A sentence containing at least one sentence connective.
+}
+\Definition{
+	Component Sentence
+}{
+	The sentence or sentences operated on by a truth-functional operator.
+}
+\Definition{
 	Sentence Connective
 }{
 	A term or phrase used to make a larger sentence from two smaller ones.
@@ -59,21 +82,68 @@
 	Truth tables are not given for statements but only for statement forms.
 }
 \Definition{
-	Conjunction
+	Logically Equivalent
 }{
-	In sentential logic, a compound sentence (or sentence form) whose main connective is dot connective.
-	\Notion{dot} connective is “and,” “and on the contrary,” "also," “although,” “both \dots and,” “but,” “despite (in spite of) the fact that,” “however,” “on the other hand,” “still,” "while,” “yet,” or a similar term.
-	\Notion{Conjunct} is one of the sentences joined together by dot connective.
+	A sentence $p$ is logically equivalent to a sentence $q$ if and only if $p$ $\equiv$ $q$ is a tautology.
 }
 \Definition{
-	Dot Operator
+	Scope
+}{
+	The scope of an operator is the component sentence or sentences that the operator operates on.
+	The negation operator operates on a single component sentence.
+	All the other operators operate on two component sentences.
+}
+\Remark{
+	\Notion{Parentheses} are used to indicate the scope of each logical operator in any sentence.
+}
+\Remark{
+	The scope of the negation operator is always the shortest complete sentence that follows it.
+}
+\Definition{
+	Main Connective
+}{
+	The sentence connective that has the greatest scope.
+	The main connective of a sentence is the truth-functional connective whose scope encompasses the entire remainder of the sentence.
+}
+\Definition{
+	Well-Formed
+}{
+	A well-formed statement is one constructed according to the formation rules of a language.
+	Sometimes such a statement is called a well-formed formula, abbreviation wff.
+}
+\Remark{
+	No sentence is legitimate--that is, well-formed--unless it is clear which operator is the main operator for the sentence and which operators have which component sentences within their scope. 
+}
+\Definition{
+	Negation
+}{
+	A sentence whose main connective is “not,” “no,” or a similar term.
+}
+\Definition{
+	Negation Operator
 }{
 	Let $T$ and $F$ be truth-value true and false seperately.
-	The dot operator is the set $\{((T, T), T), ((T, F), F), ((F, T), F), ((F, F), F)\}$.
+	The negation operator is defined as the set $\{(T, F), (F, T)\}$.
+}
+\Note{
+	It operates only on individual sentences.
+}
+\Definition{
+	Conjunction
+}{
+	In sentential logic, a compound sentence (or sentence form) whose main connective is conjunction connective.
+	\Notion{conjunction connective} is “and,” “and on the contrary,” "also," “although,” “both \dots and,” “but,” “despite (in spite of) the fact that,” “however,” “on the other hand,” “still,” "while,” “yet,” or a similar term.
+	\Notion{Conjunct} is one of the sentences joined together by conjunction connective.
+}
+\Definition{
+	Conjunction Operator
+}{
+	Let $T$ and $F$ be truth-value true and false seperately.
+	The conjunction operator is defined as the set $\{((T, T), T), ((T, F), F), ((F, T), F), ((F, F), F)\}$.
 }
 \Proposition{
 }{
-	The dot is commutative.
+	The conjunction operator is commutative.
 }{
 	Let $P$, $Q$ be statement.\\
 	\LogicProof{
@@ -120,11 +190,6 @@
 	}\\
 	\ConditionalProofArrayImplement{ImplicationPremise}{ImplicationConclusion}{2.3}
 	\ConditionalProofArrayImplement{ConversePremise}{ConverseConclusion}{2.3}
-}
-\Definition{
-	Logically Equivalent
-}{
-	A sentence $p$ is logically equivalent to a sentence $q$ if and only if $p$ $\equiv$ $q$ is a tautology.
 }
 \Remark{
 	$p$ and $q$ have the same truth-values in every line of the truth table.
