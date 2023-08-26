@@ -1,35 +1,3 @@
-% Structure
-\NewDocumentCommand{\Notion}{ m }{%
-	\textbf{#1}%
-}
-% Instance
-\NewDocumentCommand{\ExempliGratia}{ m }{%
-	e.g., {#1}%
-}
-\NewDocumentCommand{\Instance}{ m m }{%
-	\begin{instance}\textbf{\emph{#1}}\\%
-		\normalfont{#2}%
-	\end{instance}%
-}
-% Proof
-\NewDocumentCommand{\LogicProof}{ m }{%
-	\begin{tabular}{ l l l }%
-		#1%
-	\end{tabular}%
-}
-\NewDocumentCommand{\LogicProofStatement}{ m m m }{%
-	{#1} & {#2} & {#3}\\%
-}
-\newcommand{\ConditionalProofArray}[3][]{%
-  	\tikz[remember picture, baseline=({#2}.base)]%
-    	\node[minimum size=0pt,inner sep=0pt, {#1}]({#2}){{#3}};%
-}
-\NewDocumentCommand{\ConditionalProofArrayImplement}{ m m m }{%
-    \begin{tikzpicture}[remember picture, overlay]%
-        \draw[stealth-] ({#1}) -- ++(-{#3}em,0) |- ({#2}.north east);%
-    \end{tikzpicture}%
-}
-% Definition, Theorem, Remark, ...
 \NewDocumentCommand{\Axiom}{ m m }{%
 	\begin{axiom}\textbf{\emph{#1}}\\%
 		\normalfont{#2}%

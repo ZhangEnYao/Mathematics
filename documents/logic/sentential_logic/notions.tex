@@ -123,7 +123,7 @@
 	Negation Operator
 }{
 	Let $T$ and $F$ be truth-value true and false seperately.
-	The negation operator is defined as the set $\{(T, F), (F, T)\}$.
+	The negation operator is a truth-functional connective defined as the set $\{(T, F), (F, T)\}$.
 }
 \Note{
 	It operates only on individual sentences.
@@ -132,14 +132,14 @@
 	Conjunction
 }{
 	In sentential logic, a compound sentence (or sentence form) whose main connective is conjunction connective.
-	\Notion{conjunction connective} is “and,” “and on the contrary,” "also," “although,” “both \dots and,” “but,” “despite (in spite of) the fact that,” “however,” “on the other hand,” “still,” "while,” “yet,” or a similar term.
+	\Notion{Conjunction connective} is “and,” “and on the contrary,” "also," “although,” “both \dots and,” “but,” “despite (in spite of) the fact that,” “however,” “on the other hand,” “still,” "while,” “yet,” or a similar term.
 	\Notion{Conjunct} is one of the sentences joined together by conjunction connective.
 }
 \Definition{
 	Conjunction Operator
 }{
 	Let $T$ and $F$ be truth-value true and false seperately.
-	The conjunction operator is defined as the set $\{((T, T), T), ((T, F), F), ((F, T), F), ((F, F), F)\}$.
+	The conjunction operator is a truth-functional connective defined as the set \Set{$((T, T), T)$, $((T, F), F)$, $((F, T), F)$, $((F, F), F)$}.
 }
 \Proposition{
 }{
@@ -193,6 +193,68 @@
 }
 \Remark{
 	$p$ and $q$ have the same truth-values in every line of the truth table.
+}
+\Definition{
+	Disjunctions
+}{
+	A compound sentence whose main connective is an “or.”
+	\Notion{Disjunctions connective} is “or,” “either . . . or,” or a similar term.
+	\Notion{Disjunct} is either of the component sentences in a disjunction.
+}
+\Remark{
+	There are two different senses of the connective “or” in common use.
+}
+\Definition{
+	Disjunction Operator
+}{
+	Let $T$ and $F$ be truth-value true and false seperately.
+	The disjunction operator a truth-functional connective defined as the set \Set{$((T, T), T)$, $((T, F), T)$, $((F, T), T)$, $((F, F), F)$}.
+}
+\Definition{
+	Exclusive “Or”
+}{
+	One and only one of the two disjuncts is true, not both.
+	Or, at least one disjunct is false.
+}
+\Definition{
+	Inclusive (Nonexclusive) “Or”, or And/Or
+}{
+	At least one of the two disjuncts is true, but leaves open the possibility that both disjuncts are true.
+	Or, at least one of its disjuncts is true.
+}
+\Remark{
+	A sentence whose major connective is an exclusive “or” asserts more than it would if the “or” were inclusive.
+	The inclusive “or” is only part of the meaning of the exclusive “or.”
+}
+\Remark{
+	Many sentences contain more than one logical operator.
+	\ExempliGratia{Not $\dots$ Both, Neither $\dots$ Nor.}
+	Let $P$, $Q$ be statements. Not both $P$ and $Q$ is symbolized $\neg$($P$ $\land$ $Q$); Neither $P$ nor $Q$ is symbolized $\neg$$P$ $\land$ $\neg$$Q$. 
+}
+\Definition{
+	Conditional, or Hypothetical
+}{
+	A compound sentence that expresses an “If $dots$ then” relationship between its component sentences.
+	The sentence between the “if” and the “then” is called its \Notion{antecedent}, and the sentence after the “then” its \Notion{consequent}.
+}
+\Definition{
+	Material Implication
+}{
+	Let $T$ and $F$ be truth-value true and false seperately.
+	The conditional operator a truth-functional connective (or truth-function) defined as the set \Set{$((T, T), T)$, $((T, F), F)$, $((F, T), T)$, $((F, F), F)$}.
+}
+\Definition{
+	Material Conditional
+}{
+	A compound statement whose main connective is material implication.
+}
+\Remark{
+	Conditional sentences differ with respect to the kind of connection they express between anteced- ent and consequent.
+	The connection between antecedent and consequent is logical, if the antecedent is true implies the consequent must be;
+	the connection is causal if the conditions stated in the antecedent cause the conditions stated in the consequent.
+}
+\Note{
+	The general form of a conditional sentence is "if (antecedent), then (consequent)."
 }
 \Algorithm{
 	Test of a Proposed Symbolization
