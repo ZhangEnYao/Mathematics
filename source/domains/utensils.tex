@@ -1,5 +1,5 @@
 % Structure
-\NewDocumentCommand{\Notion}{ m }{%
+\NewDocumentCommand{\Domain}{ m }{%
 	\textbf{#1}%
 }
 % Instance
@@ -8,6 +8,12 @@
 }
 \NewDocumentCommand{\Instance}{ m m }{%
 	\begin{instance}\textbf{\emph{#1}}\\%
-		\normalfont{#2}%
+	\normalfont{#2}%
 	\end{instance}%
+}
+\NewDocumentCommand{\Notion}{ m m }{%
+	\begin{notion}%
+	\normalfont{#1}
+	\normalfont{#2}
+	\end{notion}%
 }

@@ -1,10 +1,10 @@
 \NewDocumentCommand{\LogicProof}{ m }{%
 	\begin{tabular}{ l l l }%
-		#1%
+	#1%
 	\end{tabular}%
 }
 \NewDocumentCommand{\LogicProofStatement}{ m m m }{%
-	{#1} & {#2} & {#3}\\%
+	{#1}&{#2}&{#3}\\%
 }
 \newcommand{\ConditionalProofArray}[3][]{%
   	\tikz[remember picture, baseline=({#2}.base)]%
