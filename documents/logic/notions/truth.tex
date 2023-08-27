@@ -24,7 +24,7 @@
 }
 \Remark{
 	Our system of logic has five truth-functional operators.
-	One operator, not, takes only one input; the other four, and, or, if {\dots} then, and if and only if, take two.
+	One operator, not, takes only one input; the other four, and, or, if \dots then, and if and only if, take two.
 }
 \Remark{
 	The meaning of a logical operator is given by its truth conditions.
@@ -38,4 +38,24 @@
 	A statement does not have a truth table;
 	a statement has a line in a truth table, depending on the truth-value of its component statements.
 	Truth tables are not given for statements but only for statement forms.
+}
+\Definition{
+	Valuation
+}{
+	An assignment of truth-values to atomic statements from which the truth-value of compound statements in which they occur can be calculated using truth tables.
+	If we assign truth to a statement $A$, we write $V(A) = T$.
+}
+\Remark{
+	A substitution instance of a compound sentence form can be considered to be a line in a truth table after a valuation of its atomic components is made.
+}
+\Theorem{
+}{
+	A compound statement form, which contains $n$ variables, has $2^{n}$ substitution instances, as shown by its $2^{n}$-line truth table.
+}{
+	Since there are two truth-values, the valuation is a function from the set of sentences into the set of truth values.
+	There are two substitution instances of truth-values for each sentence variable.
+	Consequently, a compound statement form that contains $n$ variables has $2^n$ substitution instances.
+}
+\Remark{
+	Each substitution instance will have a valuation, which is a function, ultimately, of the valuation of its atomic components.
 }

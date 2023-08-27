@@ -35,7 +35,7 @@
 	Negation Operator
 }{
 	Let $T$ and $F$ be truth-value true and false seperately.
-	The negation operator is a truth-functional connective defined as the set $\{(T, F), (F, T)\}$.
+	The negation operator is a truth-functional connective defined as the set \Set{$(T, F)$, $(F, T)$}.
 }
 \Note{
 	It operates only on individual sentences.
@@ -104,9 +104,9 @@
 		}{	$(Q \cdot P) \iff (P \cdot Q)$
 		}{	4, 8
 		}
-	}\\
-	\ConditionalProofArrayImplement{ImplicationPremise}{ImplicationConclusion}{2.3}
-	\ConditionalProofArrayImplement{ConverseImplicationPremise}{ConverseImplicationConclusion}{2.3}
+	}
+	\ConditionalProofArrayImplement{ImplicationPremise}{ImplicationConclusion}{2.3em}
+	\ConditionalProofArrayImplement{ConverseImplicationPremise}{ConverseImplicationConclusion}{2.3em}
 }
 \Remark{
 	$p$ and $q$ have the same truth-values in every line of the truth table.
@@ -151,13 +151,13 @@
 \Definition{
 	Conditional, or Hypothetical
 }{
-	A compound sentence that expresses an “If $dots$ then” relationship between its component sentences.
-	The sentence follows "if" in nan "if {\dots} then" statements is called \Domain{antecedent}, and the sentence follows the “then” is called \Domain{consequent}.
+	A compound sentence that expresses an “If \dots then” relationship between its component sentences.
+	The sentence follows "if" in nan "if \dots then" statements is called \Domain{antecedent}, and the sentence follows the “then” is called \Domain{consequent}.
 	The consequent is \Domain{necessary condition} for the antecedent; the antecedent expresses a sufficient condition.
 }
 \Remark{
 	Let $P$, $Q$ be statements.
-	$P$ only if $Q$ is logically equivalent to $\neg{P}$ $\implies$ $\neg{Q}$.
+	$P$ only if $Q$ is logically equivalent to $\neg{P} \implies \neg{Q}$.
 }
 \Note{
 	A material conditional is essentially a statement that the truth of the antecedent is sufficient for the truth of the consequent and that the truth of the consequent is necessary for the truth of the antecedent.
@@ -192,7 +192,8 @@
 \Definition{
 	Logically Equivalent
 }{
-	A sentence $p$ is logically equivalent to a sentence $q$ if and only if $p$ $\equiv$ $q$ is a tautology.
+	A sentence $p$ is logically equivalent to a sentence $q$ if and only if $p \equiv q$ is a tautology.
+	That is, two sentences have exactly the same truth conditions.
 }
 \Definition{
 	Material Equivalence Operator
@@ -217,74 +218,74 @@
 \Notion{
 	Many sentences contain more than one logical operator.
 }{
-	\ExempliGratia{Not $\dots$ Both, Neither $\dots$ Nor, Unless.}
+	\ExempliGratia{Not \dots Both, Neither \dots Nor, Unless.}
 	Let $P$, $Q$ be statements.
-	Not both $P$ and $Q$ is symbolized $\neg$($P$ $\land$ $Q$);
-	Neither $P$ nor $Q$ is symbolized $\neg$$P$ $\land$ $\neg$$Q$;
-	$P$ unless $Q$ is symbolized $\neg{Q}$ $\implies$ $P$ (or $P$ $\lor$ $Q$).
+	Not both $P$ and $Q$ is symbolized $\neg$($P \land Q$);
+	Neither $P$ nor $Q$ is symbolized $\neg{P} \land \neg{Q}$;
+	$P$ unless $Q$ is symbolized $\neg{Q} \implies P$ (or $P \lor Q$).
 }
 \Claim{
 }{
-	$\neg{Q}$ $\implies$ $P$ is logically equivalent to $P$ $\lor$ $Q$.
+	$\neg{Q}$ $\implies$ $P$ is logically equivalent to $P \lor Q$.
 }{
 	Let $P$, $Q$ be statements.\\
 	\LogicProof{
 		\LogicProofStatement
 		{	\ConditionalProofArray{ImplicationPremise}{1.}
-		}{	$\neg{Q}$ $\implies$ $P$
+		}{	$\neg{Q} \implies P$
 		}{	Assumed Premise
 		}
 		\LogicProofStatement
 		{	2.
-		}{	$\neg{\neg{Q}}$ $\lor$ $P$
+		}{	$\neg{\neg{Q}} \lor P$
 		}{	1
 		}
 		\LogicProofStatement
 		{	3.
-		}{	$Q$ $\lor$ $P$
+		}{	$Q \lor P$
 		}{	2
 		}
 		\LogicProofStatement
 		{	4.
-		}{	$P$ $\lor$ $Q$
+		}{	$P \lor Q$
 		}{	3
 		}
 		\LogicProofStatement
 		{	5.
-		}{	($\neg{Q}$ $\implies$ $P$) $\implies$ ($P$ $\lor$ $Q$)
+		}{	$(\neg{Q} \implies P) \implies (P \lor Q)$
 		}{	\ConditionalProofArray{ImplicationConclusion}{1, 4, Conditional Proof}
 		}
 		\LogicProofStatement
 		{	\ConditionalProofArray{ConverseImplicationPremise}{6.}
-		}{	$P$ $\lor$ $Q$
+		}{	$P \lor Q$
 		}{	Assumed Premise
 		}
 		\LogicProofStatement
 		{	7.
-		}{	$Q$ $\lor$ $P$
+		}{	$Q \lor P$
 		}{	6.
 		}
 		\LogicProofStatement
 		{	8.
-		}{	$\neg{\neg{Q}}$ $\lor$ $P$
+		}{	$\neg{\neg{Q}} \lor P$
 		}{	7.
 		}
 		\LogicProofStatement
 		{	9.
-		}{	$\neg{Q}$ $\implies$ $P$
+		}{	$\neg{Q} \implies P$
 		}{	8.
 		}
 		\LogicProofStatement
 		{	10.
-		}{	($P$ $\lor$ $Q$) $\implies$ ($\neg{Q}$ $\implies$ $P$)
+		}{	$(P \lor Q) \implies (\neg{Q} \implies P)$
 		}{	\ConditionalProofArray{ConverseImplicationConclusion}{6, 9, Conditional Proof}
 		}
 		\LogicProofStatement
 		{	11.
-		}{	($P$ $\lor$ $Q$) $\iff$ ($\neg{Q}$ $\implies$ $P$)
+		}{	$(P \lor Q) \iff (\neg{Q} \implies P)$
 		}{	5, 10
 		}
-	}\\
-	\ConditionalProofArrayImplement{ImplicationPremise}{ImplicationConclusion}{2.3}
-	\ConditionalProofArrayImplement{ConverseImplicationPremise}{ConverseImplicationConclusion}{2.3}
+	}
+	\ConditionalProofArrayImplement{ImplicationPremise}{ImplicationConclusion}{2.3em}
+	\ConditionalProofArrayImplement{ConverseImplicationPremise}{ConverseImplicationConclusion}{2.3em}
 }

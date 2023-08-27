@@ -1,0 +1,81 @@
+\Definition{
+	Substitution
+}{
+	An operation performed by putting a statement in place of a variable.
+}
+\Remark{
+	We obtain statements from statement forms by substitution.
+}
+\Definition{
+	Substitution Instance
+}{
+	A sentence obtained from a sentence form by replacing all the sentence variables in the sentence form by sentences.
+	A sentence is a substitution instance of a form if and only if you can produce exactly that sentence by doing nothing other than replacing each variable in the form with a well-formed sentence.
+}
+\Remark{
+	All their substitution instances are sentences.
+}
+\Note{
+	Every occurrence of a given sentence variable must be replaced by the same sentence.
+}
+\Notion{
+	Compound sentences are substitution instances of more than one sentence form.
+}{
+	In fact, a compound sentence is at least one substitution instance of its "atomic" form, "basic" form, and "expanded" form.
+}
+\Algorithm{
+	Determining all the forms for a sentence.
+}{
+	\List{enumerate}{
+		\item{
+			Every sentence is a substitution instance of what we can refer to as the "\Domain{atomic form}"—namely, the form $p$.
+		}
+		\item{
+			If a sentence is not atomic, it will be a substitution instance of one of the five forms that have only one logical connective.
+			The \Domain{basic form} of a sentence is the form that consists only of the main connective of the sentence and variables.
+		}
+		\item{
+			Every sentence is a substitution instance of its \Domain{expanded form}, the form you get when you systematically replace each atomic letter in the sentence with a variable.
+		}
+		\item{
+			To produce the remaining forms systematically, you might begin by thinking about the sentences represented by the variables in the basic form.
+			For each of these variables in turn determine the basic form, so we can represent this bit of logical structure with the form.
+			Of course, we can show both these bits of structure at once with the form.
+			We would just repeat this procedure for the new forms we've produced, revealing any structure represented by atomic letters in these new forms.
+		}
+	}
+}
+\Remark{
+	Other than the atomic form, every correct form should have the same main connective as the sentence's basic form.
+}
+\Remark{
+	No sentence is a substitution instance of a form that contains more logical structure, or a different kind of logical structure, than the sentence's expanded form.
+}
+\Remark{
+	If there are additional forms beyond these three, they will have the same main connective as the basic form, be more complex than the basic form, and be less complex but otherwise have the same kind of form as the expanded form.
+}
+\Definition{
+	Sentence Form
+}{
+	An expression containing only a sentential variable or sentential variables and logical connectives.
+}
+\Remark{
+	Sentence forms are not sentences and so are neither true nor false.
+	If we replace all the variables in a sentence form by expressions (atomic or compound) that are sentences, then the resulting expression is a sentence.
+}
+\Remark{
+	A sentence may have more logical structure than a form of which it is a substitution instance, but it can never have less.
+}
+\Definition{
+	Argument Form
+}{
+	Informally, the logical structure of an argument.
+	Formally, a group of sentence forms, all of whose substitution instances are arguments.
+}
+\Remark{
+	The logical form of an argument is found by finding the forms of the premises and conclusion.
+}
+\Remark{
+	Valid arguments depend on their logical form.
+	We can decide whether there is any possibility that an argument with that form could have true premises and a false conclusion.
+}
