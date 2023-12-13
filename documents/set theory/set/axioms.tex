@@ -6,7 +6,7 @@
 \Axiom{
 	Extensionality
 }{
-	If every element of X is an element of Y and every element of Y is an element of X, then X = Y.
+	If every element of $X$ is an element of $Y$ and every element of $Y$ is an element of $X$, then $X = Y$.
 }
 \Lemma{}{
 	There exists only one set with no elements.
@@ -16,77 +16,106 @@
 \Definition{
 	Empty, Vacuous Set
 }{
-	The (unique) set with no elements is called the empty, vacuous set and is denoted {$\emptyset$}.
+	The (unique) set with no elements is called the empty, vacuous set and is denoted $\emptyset$.
+}
+\Note{
+	Occasionally refer to $\emptyset$ as the constant.
 }
 \Axiom{
 	Comprehension
 }{
-	Let P(x) be a property of x. For any set A, there is a set B such that x {$\in$} B if and only if x {$\in$} A and P(x).
+	Let $P(x)$ be a property of $x$. For any set $A$, there is a set $B$ such that  $x \in B$ if and only if $x \in A$ and $P(x)$.
 }
 \Note{
-	For any sets p, {\dots}, q and any A, there is a set B (depending on p, {\dots}, q and, of course, on A) consisting exactly of all those x {$\in$} A for which P(x, p, {\dots}, q).
+	For any sets $p$, {\dots}, $q$ and any $A$, there is a set $B$ (depending on $p$, {\dots}, $q$ and, of course, on $A$) consisting exactly of all those $x \in A$ for which $P(x, p, {\dots}, q)$.
 }
 \Lemma{}{
-	For every A, there is only one set B such that x {$\in$} B if and only if x {$\in$} A and P(x).
+	For every $A$, there is only one set $B$ such that $x \in B$ if and only if $x \in A$ and $P(x)$.
 }{
 	Obviously.
 }
 \Definition{
-	\Set{x {$\in$} A {$\mid$} P(x)}
+	$\Set{x \in A \mid P(x)}$
 }{
-	The set of all x {$\in$} A with the property P(x).
+	The set of all $x \in A$ with the property $P(x)$.
+}
+\Note{
+	If there is a set $A$ such that, for all $x$, $P(x)$ implies $x \in A$, then $\Set{x \in A \mid P(x)}$ exists, and, moreover, does not depend on $A$.
+	That means that if $A'$ is another set such that for all $x$, $P(x)$ implies $x \in A'$, then $\Set{x \in A' \mid P(x)} = \Set{x \in A \mid P(x)}$.
+}
+\Definition{
+	$\Set{x \mid P(x)}$
+}{
+	$\Set{x \mid P(x)}$ to be the set $\Set{x \in A \mid P(x)}$, where $A$ is any set for which $P(x)$ implies $x \in A$. 
+}
+\Note{
+	$\Set{x \mid P(x)}$ is the set of all $x$ with the property $P(x)$.
+}
+\Note{
+	This notation can be used only after it has been proved that some $A$ contains all $x$ with the property $P$.
 }
 \Property{}{
-	\Set{x {$\in$} {$\emptyset$} {$\mid$} P(x)} = {$\emptyset$}.
+	$\Set{x \in \emptyset \mid P(x)} = \emptyset$.
 }{
 	Obviously.
+}
+\Lemma{}{
+	If $P$ and $Q$ are sets, then there is a set $R$ such that $x \in R$ if and only if $x \in P$ and $x \in Q$.
+}{
+	Obviously.
+}
+\Definition{
+	Intersection, Operation
+}{
+	We can introduce a name, say $X \cap Y$, and call $X \cap Y$ the intersection of $X$ and $Y$.
+	$\cap$ as the operation.
 }
 \Axiom{
 	Pair
 }{
-	For any A and B, there is a set C such that x {$\in$} C if and only if x = A or x = B.
+	For any $A$ and $B$, there is a set $C$ such that $x \in C$ if and only if $x = A$ or $x = B$.
 }
 \Note{
-	A {$\in$} C and B {$\in$} C, and there are no other elements of C.
+	$A \in C$ and $B \in C$, and there are no other elements of $C$.
 }
 \Property{}{
-	The set C is unique.
+	The set $C$ is unique.
 }{
 	Obviously.
 }
 \Definition{
 	Unordered Pair
 }{
-	Unordered pair of A and B as the set having exactly A and B as its elements.
+	Unordered pair of $A$ and $B$ as the set having exactly $A$ and $B$ as its elements.
 }
 \Axiom{
 	Union
 }{
-	For any set S, there exists a set U such that x {$\in$} U if and only if x {$\in$} A for some A {$\in$} S.
+	For any set $S$, there exists a set $U$ such that $x \in U$ if and only if $x \in A$ for some $A \in S$.
 }
 \Property{}{
-	Set U is unique.
+	Set $U$ is unique.
 }{
 	Obviously.
 }
 \Definition{
 	Union
 }{
-	U is the union of S.
+	$U$ is the union of $S$.
 }
 \Note{
-	Denoted by {$\bigcup$}S.
+	Denoted by $\bigcup S$.
 }
 \Axiom{
 	Power Set
 }{
-	For any set S, there exists a set P such that X {$\in$} P if and only if X {$\subseteq$} S.
+	For any set $S$, there exists a set $P$ such that $X \in P$ if and only if $X \subseteq S$.
 }
 \Property{}{
-	The set P is uniquely determined.
+	The set $P$ is uniquely determined.
 }{
 	Obviously.
 }
 \Note{
-	We call the set of all subsets of S the power set of S and denote it by {$\mathcal{P}(S)$}.
+	We call the set of all subsets of $S$ the power set of $S$ and denote it by $\mathcal{P}(S)$.
 }
