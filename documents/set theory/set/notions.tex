@@ -10,6 +10,7 @@
 \Note{
 	By merely defining a set we do not prove its existence. There are properties which do not define sets.
 }
+
 \Definition{
 	Variable
 }{
@@ -21,6 +22,7 @@
 	We use the identity sign "$=$" to express that two variables denote the same set.
 	$X = Y$ if $X$ is the same set as $Y$.
 }
+
 \Definition{
 	System of Sets, Collection of Sets
 }{
@@ -49,13 +51,51 @@
 }{
 	A proposition is a property of $X$, $Y$, {\dots}$Z$ if it holds or does not hold depending on sets (or called parameters) denoted by $X$, $Y$, {\dots}$Z$.
 }
+
 \Definition{
-	Subset
+	Subset, included in
 }{
-	$A$ is a subset of $B$ if, for every $x$, $x \in A$ implies $x \in B$.
+	$A$ is a subset of (included in) $B$ if, for every $x$, $x \in A$ implies $x \in B$.
 }
 \Note{
 	Denoted by $A \subseteq B$.
+}
+\Definition{
+	Inclusion
+}{
+	The property $\subseteq$ is called inclusion.
+}
+\Theorem{}{
+	$A \subseteq A$.\newline
+	If $A \subseteq B$ and $B \subseteq A$, then $A = B$.\newline
+	If $A \subseteq B$ and $B \subseteq C$, then $A \subseteq C$.
+}{
+	Obviously.
+}
+\Definition{
+	Proper Subset, properly contained in
+}{
+	If $A \subseteq B$ and $A \subset B$, we say that $A$ is a proper subset of $B$ ($A$ is properly contained in $B$) and write $A \subset B$.
+}
+\Definition{
+	Intersection
+}{
+	The intersection of $A$ and $B$, $A \cap B$, is the set of all $x$ which belong to both $A$ and $B$.
+}
+\Definition{
+	Union
+}{
+	The union of $A$ and $B$, $A \cup B$, is the set of all $x$ which belong in either $A$ or $B$ (or both).
+}
+\Definition{
+	Difference
+}{
+	The difference of $A$ and $B$, $A - B$, is the set of all $x \in A$ which do not belong to $B$.
+}
+\Definition{
+	Symmetric Difference
+}{
+	The symmetric difference of $A$ and $B$, $A \triangle B$, is defined by $A \triangle B = (A-B) \cup (B-A)$.
 }
 
 \Definition{
