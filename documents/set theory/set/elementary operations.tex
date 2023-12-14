@@ -1,0 +1,117 @@
+\Definition{
+	Subset,
+	included in
+}{
+	$A$ is a subset of (included in) $B$ if, for every $x$, $x \in A$ implies $x \in B$ and denoted by $A \subseteq B$.
+}
+\Property{}{
+	$A \subseteq B \land B \subseteq C \implies A \subseteq C$.
+}{
+	Obviously.
+}
+\Definition{
+	Inclusion
+}{
+	The property $\subseteq$.
+}
+\Theorem{}{
+	$A \subseteq A$.\newline
+	If $A \subseteq B$ and $B \subseteq A$, then $A = B$.\newline
+	If $A \subseteq B$ and $B \subseteq C$, then $A \subseteq C$.
+}{
+	Obviously.
+}
+\Definition{
+	Proper Subset,
+	properly contained in
+}{
+	If $A \subseteq B$ and $A \neq B$, $A$ is a proper subset of $B$ ($A$ is properly contained in $B$) and denoted by $A \subset B$.
+}
+\Definition{
+	Intersection
+}{
+	The intersection of $A$ and $B$, $A \cap B$, is the set of all $x$ which belong to both $A$ and $B$.
+    The intersection $\bigcap S$ of a nonempty system of sets $S$: $x \in \bigcap S$ if and only if $x \in A$ for all $A \in S$.
+}
+\Property{}{
+    $\bigcap \emptyset$ would have to be a set of all sets.
+}{
+    Every $x$ belongs to all $ \in \emptyset$.
+}
+\Theorem{}{
+	$\cap emptyset$ would have to be a set of all sets.
+}{
+	Obviously.
+}
+\Definition{
+	Disjoint
+}{
+	$A$ and $B$ are disjoint if $A \cap B = emptyset$.
+}
+\Definition{
+	Mutually Disjoint
+}{
+	$S$ is a system of mutually disjoint sets if $A \cap B = emptyset$ for all $A, B \in S$ such that $A \neq B$.
+}
+\Definition{
+	Union
+}{
+	The union of $A$ and $B$, $A \cup B$, is the set of all $x$ which belong in either $A$ or $B$ (or both).
+}
+\Definition{
+	Difference
+}{
+	The difference of $A$ and $B$, $A - B$, is the set of all $x \in A$ which do not belong to $B$.
+}
+\Definition{
+	Symmetric Difference
+}{
+	The symmetric difference of $A$ and $B$, $A \triangle B$, is defined by $A \triangle B = (A-B) \cup (B-A)$.
+}
+\Property{
+	Commutativity
+}{
+	$A \cap B = B \cap A$,
+	$A \cup B = B \cup A$,
+    $A \triangle B = B \triangle A$
+}{
+	Obviously
+}
+\Property{
+	Associativity
+}{
+	$(A \cap B) \cap C = A \cap (B \cap C)$,
+	$(A \cup B) \cup C = A \cup (B \cup C)$,
+    $(A \triangle B) \triangle C = A \triangle (B \triangle C)$,
+}{
+	Obviously
+}
+\Note{
+	We do not need parentheses for the intersection, union and for more than three sets.
+}
+\Property{
+	Distributivity
+}{
+	$A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$,
+	$A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$
+}{
+	Obviously
+}
+\Property{
+	DeMorganlaws
+}{
+	$C - (A \cap B) = (C - A) \cup (C - B)$,
+	$C - (A \cup B) = (C - A) \cap (C - B)$
+}{
+	Obviously
+}
+\Property{}{
+	$A - B = \emptyset$ if and only if $A \subseteq B$.
+}{
+	Obviously.
+}
+\Property{}{
+    $A \triangle A = \emptyset$
+}{
+    Obviously.
+}

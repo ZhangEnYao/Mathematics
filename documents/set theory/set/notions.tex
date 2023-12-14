@@ -1,118 +1,34 @@
+Unter einer Menge verstehen wir jede Zusammenfassung M von bestimmten wohlunterschiedenen Objekten in unserer Anschauung oder unseres Denkens (welche die Elemente von M genannt werden) zu einem ganzen.
 \Definition{
-	Set, Element (Member)
+	Set,
+	Element (Member),
+	belong to
 }{
-	A set is a collection (group, or conglomerate) into a whole of definite, distinct objects of our intuition or our thought.
-	The objects from which a given set is composed are called elements or members of the set. We also say that they belong to that set.
-}
-\Note{
-	The human mind possesses the ability to abstract, to think of a variety of different objects as being bound together by some common property, and thus to form a set of objects having that property.
-}
-\Note{
-	By merely defining a set we do not prove its existence. There are properties which do not define sets.
+	A set is a collection of objects of our intuition.
+	The objects are elements (members) of the set.
+	We say that they belong to that set.
 }
 
-\Definition{
-	Variable
-}{
-	Unspecified, arbitrary sets.
-}
-\Definition{
-	identical with, equal to
-}{
-	We use the identity sign "$=$" to express that two variables denote the same set.
-	$X = Y$ if $X$ is the same set as $Y$.
-}
-
-\Definition{
-	System of Sets, Collection of Sets
-}{
-	Elements of the set are sets.
-}
-
+Property defines a set.
 \Definition{
 	Property
 }{
-	The property is the ability to think of these objects (as being) together.
+	The notion of thinking of objects as being together.
 }
-\Instance{
-	Membership
+\Definition{
+	property of,
+	depends on,
+	Parameter
 }{
-	"{\dots} is an element (member) of {\dots},",
-	"{\dots} belongs to {\dots}."
+	A proposition is a property of $X$, $Y$, {\dots}$Z$ if it holds or does not hold depending on sets (or called parameters) $X$, $Y$, {\dots}$Z$.
 }
 \Note{
-	Denote by $\in$.
+	A variety of objects are bound by some common property, and form a set of objects having that property.
 }
 \Note{
-	All other set-theoretic properties can be stated in terms of membership with the help of logical means; identity, logical connectives, and quantifiers.
+	By merely defining a set, we do not prove its existence.
+	There are properties which do not define sets.
 }
-\Definition{
-	property of, Parameter
-}{
-	A proposition is a property of $X$, $Y$, {\dots}$Z$ if it holds or does not hold depending on sets (or called parameters) denoted by $X$, $Y$, {\dots}$Z$.
-}
-
-\Definition{
-	Subset, included in
-}{
-	$A$ is a subset of (included in) $B$ if, for every $x$, $x \in A$ implies $x \in B$.
-}
-\Note{
-	Denoted by $A \subseteq B$.
-}
-\Definition{
-	Inclusion
-}{
-	The property $\subseteq$ is called inclusion.
-}
-\Theorem{}{
-	$A \subseteq A$.\newline
-	If $A \subseteq B$ and $B \subseteq A$, then $A = B$.\newline
-	If $A \subseteq B$ and $B \subseteq C$, then $A \subseteq C$.
-}{
-	Obviously.
-}
-\Definition{
-	Proper Subset, properly contained in
-}{
-	If $A \subseteq B$ and $A \subset B$, we say that $A$ is a proper subset of $B$ ($A$ is properly contained in $B$) and write $A \subset B$.
-}
-\Definition{
-	Intersection
-}{
-	The intersection of $A$ and $B$, $A \cap B$, is the set of all $x$ which belong to both $A$ and $B$.
-}
-\Theorem{}{
-	$\cap emptyset$ would have to be a set of all sets.
-}{
-	Obviously.
-}
-\Definition{
-	Disjoint
-}{
-	$A$ and $B$ are disjoint if $A \cap B = emptyset$.
-}
-\Definition{
-	Mutually Disjoint
-}{
-	$S$ is a system of mutually disjoint sets if $A \cap B = emptyset$ for all $A, B \in S$ such that $A \neq B$.
-}
-\Definition{
-	Union
-}{
-	The union of $A$ and $B$, $A \cup B$, is the set of all $x$ which belong in either $A$ or $B$ (or both).
-}
-\Definition{
-	Difference
-}{
-	The difference of $A$ and $B$, $A - B$, is the set of all $x \in A$ which do not belong to $B$.
-}
-\Definition{
-	Symmetric Difference
-}{
-	The symmetric difference of $A$ and $B$, $A \triangle B$, is defined by $A \triangle B = (A-B) \cup (B-A)$.
-}
-
 \Definition{
 	Statement
 }{
@@ -124,8 +40,52 @@
 \Note{
 	All mathematical theorems are (true) statements.
 }
+\Instance{
+	Membership,
+	belongs to
+}{
+	"{\dots} is an element (member) of {\dots},",
+	"{\dots} belongs to {\dots}".
+	Denote by $\in$.
+}
+\Note{
+	Basic set-theoretic property.
+}
 \Definition{
 	Proposition
 }{
 	Argument.	
+}
+
+Unspecified sets.
+\Definition{
+	Variable
+}{
+	Unspecified, arbitrary sets.
+}
+\Definition{
+	same set as,
+	identical with,
+	equal to
+}{
+	$X = Y$ if $X$ is the same set as (is identical with, is equal to) $Y$.
+}
+
+All other set-theoretic properties can be stated in terms of membership with the help of logical means; identity, logical connectives, and quantifiers.
+\Definition{
+	Logical Connectives
+}{
+	Expressions like "not \dots ," " \dots and \dots. ," "if \dots , then \dots ," and " \dots if and only if \dots."
+}
+\Definition{
+	Quantifiers
+}{
+	"for all" ("for every") and "there is" ("there exists").
+}
+
+\Definition{
+	System of Sets,
+	Collection of Sets
+}{
+	Elements of the set are sets.
 }

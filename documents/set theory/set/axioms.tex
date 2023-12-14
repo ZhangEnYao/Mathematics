@@ -3,38 +3,53 @@
 }{
 	There exists a set which has no elements.
 }
-
-\Axiom{
-	Extensionality
-}{
-	If every element of $X$ is an element of $Y$ and every element of $Y$ is an element of $X$, then $X = Y$.
-}
 \Lemma{}{
 	There exists only one set with no elements.
 }{
 	Obviously.
 }
 \Definition{
-	Empty, Vacuous Set
+	Empty,
+	Vacuous Set
 }{
-	The (unique) set with no elements is called the empty, vacuous set and is denoted $\emptyset$.
+	The unique set with no elements is called the empty, vacuous set and denoted $\emptyset$.
 }
 \Note{
 	Occasionally refer to $\emptyset$ as the constant.
 }
 
 \Axiom{
+	Extensionality
+}{
+	If every element of $X$ is an element of $Y$ and every element of $Y$ is an element of $X$, then $X = Y$.
+}
+
+\Axiom{
 	Comprehension
 }{
-	Let $P(x)$ be a property of $x$. For any set $A$, there is a set $B$ such that  $x \in B$ if and only if $x \in A$ and $P(x)$.
+	Let $P(x)$ be a property of $x$. For any set $A$, there is a set $B$ such that $x \in B$ if and only if $x \in A$ and $P(x)$.
 }
-\Note{
-	For any sets $p$, {\dots}, $q$ and any $A$, there is a set $B$ (depending on $p$, {\dots}, $q$ and, of course, on $A$) consisting exactly of all those $x \in A$ for which $P(x, p, {\dots}, q)$.
+\Lemma{
+	Intersection
+}{
+	If $P$ and $Q$ are sets, then there is a unique set $R$ such that $x \in R$ if and only if $x \in P$ and $x \in Q$.
+}{
+	Obviously.
+}
+\Definition{
+	Intersection,
+	Operation
+}{
+	In intersection lemma, R is called the intersection of $X$ and $Y$ and denoted as $X \cap Y$.
+	$\cap$ as the operation.
 }
 \Lemma{}{
 	For every $A$, there is only one set $B$ such that $x \in B$ if and only if $x \in A$ and $P(x)$.
 }{
 	Obviously.
+}
+\Note{
+	For any sets $p$, {\dots}, $q$ and any $A$, there is a set $B$ (depending on $p$, {\dots}, $q$ and, of course, on $A$) consisting of all $x \in A$ for which $P(x, p, {\dots}, q)$.
 }
 \Definition{
 	$\Set{x \in A \mid P(x)}$
@@ -43,7 +58,7 @@
 }
 \Note{
 	If there is a set $A$ such that, for all $x$, $P(x)$ implies $x \in A$, then $\Set{x \in A \mid P(x)}$ exists, and, moreover, does not depend on $A$.
-	That means that if $A'$ is another set such that for all $x$, $P(x)$ implies $x \in A'$, then $\Set{x \in A' \mid P(x)} = \Set{x \in A \mid P(x)}$.
+	That is, if $A'$ is a set such that for all $x$, $P(x)$ implies $x \in A'$, then $\Set{x \in A' \mid P(x)} = \Set{x \in A \mid P(x)}$.
 }
 \Definition{
 	$\Set{x \mid P(x)}$
@@ -60,17 +75,6 @@
 	$\Set{x \in \emptyset \mid P(x)} = \emptyset$.
 }{
 	Obviously.
-}
-\Lemma{}{
-	If $P$ and $Q$ are sets, then there is a set $R$ such that $x \in R$ if and only if $x \in P$ and $x \in Q$.
-}{
-	Obviously.
-}
-\Definition{
-	Intersection, Operation
-}{
-	We can introduce a name, say $X \cap Y$, and call $X \cap Y$ the intersection of $X$ and $Y$.
-	$\cap$ as the operation.
 }
 
 \Axiom{
@@ -89,7 +93,10 @@
 \Definition{
 	Unordered Pair
 }{
-	Unordered pair of $A$ and $B$ as the set having exactly $A$ and $B$ as its elements.
+	Unordered pair of $A$ and $B$ is the set having exactly $A$ and $B$ as its elements and denoted as $\Set{A, B}$.
+}
+\Note{
+	If $A = B$, we write $\Set{A}$ instead of $\Set{A, A}$.
 }
 
 \Axiom{
@@ -97,7 +104,9 @@
 }{
 	For any set $S$, there exists a set $U$ such that $x \in U$ if and only if $x \in A$ for some $A \in S$.
 }
-\Property{}{
+\Property{
+	Union
+}{
 	Set $U$ is unique.
 }{
 	Obviously.
@@ -105,10 +114,10 @@
 \Definition{
 	Union
 }{
-	$U$ is the union of $S$.
+	$U$ in union property is the union of $S$ and denoted by $\bigcup S$.
 }
 \Note{
-	Denoted by $\bigcup S$.
+	The union of a system of sets $S$ is then a set of precisely those $x$ which belong to some set from the system $S$.
 }
 
 \Axiom{
@@ -122,5 +131,5 @@
 	Obviously.
 }
 \Note{
-	We call the set of all subsets of $S$ the power set of $S$ and denote it by $\mathcal{P}(S)$.
+	We The set of all subsets of $S$ is called the power set of $S$ and denote it by $\mathcal{P}(S)$.
 }
