@@ -60,7 +60,7 @@
 	Let $P$, $Q$ be statements.\\
 	\LogicProof{
 		\LogicProofStatement
-		{	\ConditionalProofArray{ImplicationPremise}{1.}
+		{	\ConditionalProofArrow{ImplicationPremise}{1.}
 		}{	$P \cdot Q$
 		}{	Assumed Premise
 		}
@@ -77,10 +77,10 @@
 		\LogicProofStatement
 		{	4.
 		}{	$(P \cdot Q) \implies (Q \cdot P)$
-		}{	\ConditionalProofArray{ImplicationConclusion}{1, 3, Conditional Proof}
+		}{	\ConditionalProofArrow{ImplicationConclusion}{1, 3, Conditional Proof}
 		}
 		\LogicProofStatement
-		{	\ConditionalProofArray{ConverseImplicationPremise}{5.}
+		{	\ConditionalProofArrow{ConverseImplicationPremise}{5.}
 		}{	$Q \cdot P$
 		}{	Assumed Premise
 		}
@@ -97,7 +97,7 @@
 		\LogicProofStatement
 		{	8.
 		}{	$(Q \cdot P) \implies (P \cdot Q)$
-		}{	\ConditionalProofArray{ConverseImplicationConclusion}{5, 7, Conditional Proof}
+		}{	\ConditionalProofArrow{ConverseImplicationConclusion}{5, 7, Conditional Proof}
 		}
 		\LogicProofStatement
 		{	9.
@@ -105,8 +105,8 @@
 		}{	4, 8
 		}
 	}
-	\ConditionalProofArrayImplement{ImplicationPremise}{ImplicationConclusion}{2.3em}
-	\ConditionalProofArrayImplement{ConverseImplicationPremise}{ConverseImplicationConclusion}{2.3em}
+	\ConditionalProofArrowImplement{ImplicationPremise}{ImplicationConclusion}{2.3em}
+	\ConditionalProofArrowImplement{ConverseImplicationPremise}{ConverseImplicationConclusion}{2.3em}
 }
 \Remark{
 	$p$ and $q$ have the same truth-values in every line of the truth table.
@@ -231,7 +231,7 @@
 	Let $P$, $Q$ be statements.\\
 	\LogicProof{
 		\LogicProofStatement
-		{	\ConditionalProofArray{ImplicationPremise}{1.}
+		{	\ConditionalProofArrow{ImplicationPremise}{1.}
 		}{	$\neg{Q} \implies P$
 		}{	Assumed Premise
 		}
@@ -253,10 +253,10 @@
 		\LogicProofStatement
 		{	5.
 		}{	$(\neg{Q} \implies P) \implies (P \lor Q)$
-		}{	\ConditionalProofArray{ImplicationConclusion}{1, 4, Conditional Proof}
+		}{	\ConditionalProofArrow{ImplicationConclusion}{1, 4, Conditional Proof}
 		}
 		\LogicProofStatement
-		{	\ConditionalProofArray{ConverseImplicationPremise}{6.}
+		{	\ConditionalProofArrow{ConverseImplicationPremise}{6.}
 		}{	$P \lor Q$
 		}{	Assumed Premise
 		}
@@ -278,7 +278,7 @@
 		\LogicProofStatement
 		{	10.
 		}{	$(P \lor Q) \implies (\neg{Q} \implies P)$
-		}{	\ConditionalProofArray{ConverseImplicationConclusion}{6, 9, Conditional Proof}
+		}{	\ConditionalProofArrow{ConverseImplicationConclusion}{6, 9, Conditional Proof}
 		}
 		\LogicProofStatement
 		{	11.
@@ -286,6 +286,6 @@
 		}{	5, 10
 		}
 	}
-	\ConditionalProofArrayImplement{ImplicationPremise}{ImplicationConclusion}{2.3em}
-	\ConditionalProofArrayImplement{ConverseImplicationPremise}{ConverseImplicationConclusion}{2.3em}
+	\ConditionalProofArrowImplement{ImplicationPremise}{ImplicationConclusion}{2.3em}
+	\ConditionalProofArrowImplement{ConverseImplicationPremise}{ConverseImplicationConclusion}{2.3em}
 }

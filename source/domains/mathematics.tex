@@ -1,78 +1,102 @@
 \NewDocumentCommand{\Axiom}{ m m }{%
-	\begin{axiom}\textbf{\emph{#1}}\\%
-	\normalfont{#2}%
-	\end{axiom}%
+	\textcolor{black}{%
+		\begin{axiom}\textbf{\emph{#1}}\\%
+		\normalfont{#2}%
+		\end{axiom}%
+	}%
 }
 \NewDocumentCommand{\Definition}{ m m }{%
-	\begin{definition}\textbf{\emph{#1}}\\%
-	\normalfont{#2}%
-	\end{definition}%
+	\textcolor{black}{%
+		\begin{definition}\textbf{\emph{#1}}\\%
+		\normalfont{#2}%
+		\end{definition}%
+	}%
 }
 \NewDocumentCommand{\Assumption}{ m m }{%
-	\begin{assumption}\textbf{\emph{#1}}\\%
-	\normalfont{#2}%
-	\end{assumption}%
-}
-\NewDocumentCommand{\Algorithm}{ m m }{%
-	\begin{algorithm}\textbf{\emph{#1}}\\%
-	\normalfont{#2}%
-	\end{algorithm}%
+	\textcolor{darkgray}{%
+		\begin{assumption}\textbf{\emph{#1}}\\%
+		\normalfont{#2}%
+		\end{assumption}%
+	}%
 }
 \NewDocumentCommand{\Theorem}{ m m m }{%
-	\begin{theorem}\textbf{\emph{#1}}\\%
-	\normalfont{#2}%
-	\end{theorem}%
-	\begin{proof}%
-	{#3}%
-	\end{proof}%
+	\textcolor{gray}{%
+		\begin{theorem}\textbf{\emph{#1}}\\%
+		\normalfont{#2}%
+		\end{theorem}%
+		\begin{proof}%
+		{#3}%
+		\end{proof}%
+	}%
 }
 \NewDocumentCommand{\Proposition}{ m m m }{%
-	\begin{proposition}\textbf{\emph{#1}}\\%
-	\normalfont{#2}%
-	\end{proposition}%
-	\begin{proof}%
-	{#3}%
-	\end{proof}%
+	\textcolor{gray}{%
+		\begin{proposition}\textbf{\emph{#1}}\\%
+		\normalfont{#2}%
+		\end{proposition}%
+		\begin{proof}%
+		{#3}%
+		\end{proof}%
+	}%
 }
 \NewDocumentCommand{\Property}{ m m m }{%
-	\begin{property}\textbf{\emph{#1}}\\%
-	\normalfont{#2}%
-	\end{property}%
-	\begin{proof}%
-	{#3}%
-	\end{proof}%
+	\textcolor{gray}{%
+		\begin{property}\textbf{\emph{#1}}\\%
+		\normalfont{#2}%
+		\end{property}%
+		\begin{proof}%
+		{#3}%
+		\end{proof}%
+	}%
 }
 \NewDocumentCommand{\Claim}{ m m m }{%
-	\begin{claim}\textbf{\emph{#1}}\\%
-	\normalfont{#2}%
-	\end{claim}%
-	\begin{proof}%
-	{#3}%
-	\end{proof}%
+	\textcolor{gray}{%
+		\begin{claim}\textbf{\emph{#1}}\\%
+		\normalfont{#2}%
+		\end{claim}%
+		\begin{proof}%
+		{#3}%
+		\end{proof}%
+	}%
 }
 \NewDocumentCommand{\Lemma}{ m m m }{%
-	\begin{lemma}\textbf{\emph{#1}}\\%
-	\normalfont{#2}%
-	\end{lemma}%
-	\begin{proof}%
-	{#3}%
-	\end{proof}%
+	\textcolor{gray}{%
+		\begin{lemma}\textbf{\emph{#1}}\\%
+		\normalfont{#2}%
+		\end{lemma}%
+		\begin{proof}%
+		{#3}%
+		\end{proof}%
+	}%
 }
 \NewDocumentCommand{\Corollary}{ m m m }{%
-	\begin{corollary}\textbf{\emph{#1}}\\%
-	\normalfont{#2}%
-	\end{corollary}%
-	\begin{proof}%
-	{#3}%
-	\end{proof}%
+	\textcolor{gray}{%
+		\begin{corollary}\textbf{\emph{#1}}\\%
+		\normalfont{#2}%
+		\end{corollary}%
+		\begin{proof}%
+		{#3}%
+		\end{proof}%
+	}%
+}
+\NewDocumentCommand{\Algorithm}{ m m }{%
+	\textcolor{gray}{%
+		\begin{algorithm}\textbf{\emph{#1}}\\%
+		\normalfont{#2}%
+		\end{algorithm}%
+	}%
 }
 \NewDocumentCommand{\Remark}{ m }{%
-	\begin{remark}%
-	\small{#1}%
-	\end{remark}%
+	\textcolor{lightgray}{%
+		\begin{remark}%
+		\small{#1}%
+		\end{remark}%
+	}%
 }
 \NewDocumentCommand{\Note}{ m }{%
-	\begin{note}%
-	\small{#1}%
-	\end{note}%
+	\textcolor{lightgray}{%
+		\begin{note}%
+		\small{#1}%
+		\end{note}%
+	}%
 }
