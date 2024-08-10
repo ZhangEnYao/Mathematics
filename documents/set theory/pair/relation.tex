@@ -18,32 +18,72 @@
     it does not matter by what property the set of these ordered pairs is described.
 }
 
-\Definition{}{
-    Let $A$ be a binary relation.
-    \List{enumerate}{
-        \item{
-            The set of all $x$ which are in relation $A$ with some $y$ is called the domain of $R$ and denoted by \Notation{dom}{$R$}.
-        }
-        \item{
-            The set of all $y$ such that, for some $x$, $x$ is in relation $R$ with $y$ is called the range of $A$, denoted by \Notation{ran}{$R$}.
-        }
-        \item{
-            The set \Notation{dom}{$R$} $\cup$ \Notation{ran}{$R$} is called the field of $R$ and is denoted by \Notation{field}{$R$}.
-        }
-        \item{
-            If \Notation{field}{$R$} $\subseteq$ $X$, we say that $R$ is a relation in $X$ or that $R$ is a relation between elements of $X$.
-        }
-    }
-}
-\Note{
-    \Notation{dom}{$R$} is the set of all first coordinates of ordered pairs in $R$.
-}
-\Note{
-    \Notation{ran}{$R$} is the set of all second coordinates of ordered pairs in $R$.
+\Definition{
+    Inverse
+}{
+    Let $R$ be a binary relation.
+    The inverse of $R$ is the set $$\Inverse{R}=\SetComprehension{z}{z=(x, y) \land  \QuantifierCondition{\exists}{x, y}{(y, x) \in R}}.$$
 }
 
+\Definition{
+    Domain
+}{
+    Let $A$ be a binary relation.
+    The set of all $x$ which are in relation $A$ with some $y$ is called the domain of $R$ and denoted by $\DomainFunction{dom}{R}$.
+}
+\Note{
+    $\DomainFunction{dom}{R}$ is the set of all first coordinates of ordered pairs in $R$.
+}
+\Definition{
+    Range
+}{
+    Let $A$ be a binary relation.
+    The set of all $y$ such that, for some $x$, $x$ is in relation $R$ with $y$ is called the range of $A$, denoted by $\DomainFunction{ran}{R}$.
+}
+\Note{
+    $\DomainFunction{ran}{R}$ is the set of all second coordinates of ordered pairs in $R$.
+}
+\Definition{
+    Field
+}{
+    Let $A$ be a binary relation.
+    The set $\DomainFunction{dom}{R}$ $\cup$ $\DomainFunction{ran}{R}$ is called the field of $R$ and is denoted by $\DomainFunction{field}{R}$.
+    If $\DomainFunction{field}{R}$ $\subseteq$ $X$, we say that $R$ is a relation in $X$ or that $R$ is a relation between elements of $X$.
+}
 \Proposition{}{
-    Both \Notation{dom}{$R$} and \Notation{ran}{$R$} exist for any relation $R$.
+    Both $\DomainFunction{dom}{R}$ and $\DomainFunction{ran}{R}$ exist for any relation $R$.
 }{
     Obviously.
+}
+
+\Definition{
+    Image
+}{
+    The image of $A$ under $R$ is the set of all $y$ from the range of $R$ related in $R$ to some element of $A$; it is denoted by $R[A]$.
+}
+\Definition{
+    Inverse Image
+}{
+    The inverse image of $B$ under $R$ is the set of all $x$ from the domain of $R$ related in $R$ to some element of $B$; it is denoted by $\Inverse{R}[A]$.
+}
+\Proposition{}{
+    $\DomainFunction{dom}{R}$ $=$ $\DomainFunction{ran}{\Inverse{R}}$.
+}{
+    Obviously
+}
+\Proposition{}{
+    The inverse image of $B$ under $R$ is equal to the image of $B$ under $\Inverse{R}$.
+}{
+    Obviously
+}
+
+\Definition{
+    Composition
+}{
+    Let $R$ and $S$ be binary relations.
+    The composition of $R$ and $S$ is the relation.
+    $$ \Compose{S}{R} = \SetComprehension{(x, z)}{\QuantifierCondition{\exists}{y}{(x, y) \in R \land (y, z) \in S}}$$.
+}
+\Note{
+    $(x, z)$ $\in$ $\Compose{S}{R}$ means that for some $y$, $(x, y) \in R$ and $(y, z) \in S$.
 }
