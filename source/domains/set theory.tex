@@ -1,25 +1,29 @@
-\NewDocumentCommand{\Inverse}{ m }{%
-	{#1}^{-1}%
-}
-
 \NewDocumentCommand{\DomainFunction}{ m m }{%
 	\text{\normalfont{#1}{\thinspace}}{#2}%
 }
 
-\NewDocumentCommand{\Set}{ m }{%
-	\{{#1}\}%
-}
-
-\NewDocumentCommand{\Powerset}{ m }{%
-	\mathcal{P}({#1})%
+\NewDocumentCommand{\SetComprehension}{ m m }{%
+	\{\thinspace{#1}\ \vert\ {#2}\thinspace\}%
 }
 
 \NewDocumentCommand{\QuantifierCondition}{ m m m }{%
 	{#1}\thinspace{#2}\thinspace\big({#3})%
 }
 
-\NewDocumentCommand{\SetComprehension}{ m m }{%
-	\{\thinspace{#1}\ \vert\ {#2}\thinspace\}%
+\NewDocumentCommand{\Set}{ m }{%
+	\{{#1}\}%
+}
+
+\NewDocumentCommand{\Inverse}{ m }{%
+	{#1}^{-1}%
+}
+
+\NewDocumentCommand{\Powerset}{ m }{%
+	\mathcal{P}({#1})%
+}
+
+\NewDocumentCommand{\CartesianProduct}{ m m }{%
+	{#1}\times{#2}%
 }
 
 \NewDocumentCommand{\Compose}{ m m }{%

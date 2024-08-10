@@ -9,6 +9,7 @@
 }{
     A set $A$ is a binary relation if all elements of $R$ are ordered pairs,
     i.e., if for any $z$ $\in$ $R$ there exist $x$ and $y$ such that $z$ $=$ $(x, y)$.
+    A binary relation $A$ is in $A$ if and only if $R$ $\subseteq$ $A^{2}$ 
 }
 \Note{
     Relations between objects of two sorts called binary relations.
@@ -51,7 +52,7 @@
     If $\DomainFunction{field}{R}$ $\subseteq$ $X$, we say that $R$ is a relation in $X$ or that $R$ is a relation between elements of $X$.
 }
 \Proposition{}{
-    Both $\DomainFunction{dom}{R}$ and $\DomainFunction{ran}{R}$ exist for any relation $R$.
+    Both \Keywords{$\DomainFunction{dom}{R}$} and \Keywords{$\DomainFunction{ran}{R}$} \Keywords{exist} for any relation $R$.
 }{
     Obviously.
 }
@@ -67,12 +68,12 @@
     The inverse image of $B$ under $R$ is the set of all $x$ from the domain of $R$ related in $R$ to some element of $B$; it is denoted by $\Inverse{R}[A]$.
 }
 \Proposition{}{
-    $\DomainFunction{dom}{R}$ $=$ $\DomainFunction{ran}{\Inverse{R}}$.
+    \Keywords{$\DomainFunction{dom}{R}$} $=$ \Keywords{$\DomainFunction{ran}{\Inverse{R}}$}.
 }{
     Obviously
 }
 \Proposition{}{
-    The inverse image of $B$ under $R$ is equal to the image of $B$ under $\Inverse{R}$.
+    The \Keywords{inverse image of $B$ under $R$} is equal to the \Keywords{image of $B$ under $\Inverse{R}$}.
 }{
     Obviously
 }
@@ -82,8 +83,57 @@
 }{
     Let $R$ and $S$ be binary relations.
     The composition of $R$ and $S$ is the relation.
-    $$ \Compose{S}{R} = \SetComprehension{(x, z)}{\QuantifierCondition{\exists}{y}{(x, y) \in R \land (y, z) \in S}}$$.
+    $$ \Compose{S}{R} = \SetComprehension{(x, z)}{\QuantifierCondition{\exists}{y}{(x, y) \in R \land (y, z) \in S}}.$$
 }
 \Note{
     $(x, z)$ $\in$ $\Compose{S}{R}$ means that for some $y$, $(x, y) \in R$ and $(y, z) \in S$.
+}
+
+\Definition{
+    Cartesian Product
+}{
+    Let $A$ and $B$ be sets.
+    The set of all ordered pairs whose first coordinate is from $A$ and whose second coordinate is from $B$ is called the cartesian product of $A$ and $B$ and denoted $\CartesianProduct{A}{B}$.
+}
+\Note{
+    $\CartesianProduct{A}{B}$ is a relation in which every element of $A$ is related to every element of $B$.
+}
+\Proposition{}{
+    \Keywords{$\CartesianProduct{A}{B}$ exists}.
+}{
+    $\CartesianProduct{A}{B} = \SetComprehension{w \in \Powerset{\Powerset{\Set{a, b}}}}{w = (a, b) \land \QuantifierCondition{\exists}{a, b}{a \in A \land b \in B}}.$
+}
+\Proposition{}{
+    $\CartesianProduct{(\CartesianProduct{A}{B})}{C}$ $=$ $\CartesianProduct{\CartesianProduct{A}{B}}{C}$.
+}{
+    Obviously.
+}
+\Note{
+    $\CartesianProduct{\CartesianProduct{A}{B}}{C} = \SetComprehension{(a, b, c)}{a \in A \land b \in B \land c \in C}.$
+}
+
+\Definition{
+    Unary Relation
+}{
+    A unary relation is any set.
+    A unary relation in $A$ is any subset of $A$.
+}
+
+\Definition{
+    Ternary Relation
+}{
+    A ternary relation is a set of unordered triples.
+    More explicitly, $S$ is a ternary relation if for every $u$ $\in$ $S$, there exist $x$, $y$, and $z$ such that $u = (x, y, z).$
+    If $S$ $\subseteq$ $A^{3}$, we say that $S$ is a ternary relation in $A$.
+}
+
+\Definition{
+    Membership Relation
+}{
+    The membership relation on $A$ is defined by $${\in}_{A} = \SetComprehension{(a, b)}{a, b \in A \land a \in b}.$$
+}
+\Definition{
+    Identity Relation
+}{
+    The identity relation on $A$ is defined by $${Id}_{A} = \SetComprehension{(a, b)}{a, b \in A \land a = b}.$$
 }
