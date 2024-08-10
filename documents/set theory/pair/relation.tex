@@ -1,7 +1,10 @@
 \Notion{
     Summary
 }{
-    Undering.
+    Binary Relation Structures: Domain, Range, Field, Image.\\
+    Binary Relation Operators: Inverse, Composition, Cartesian Product,\\
+    Binary Relation Instances: Membership Relation, Identity Relation.\\
+    Binary Relation Generalizations: Unary Relation, Ternary Relation.\\
 }
 
 \Definition{
@@ -17,13 +20,6 @@
 \Note{
     A binary relation is determined by specifying all ordered pairs of objects in that relation;
     it does not matter by what property the set of these ordered pairs is described.
-}
-
-\Definition{
-    Inverse
-}{
-    Let $R$ be a binary relation.
-    The inverse of $R$ is the set $$\Inverse{R}=\SetComprehension{z}{z=(x, y) \land  \QuantifierCondition{\exists}{x, y}{(y, x) \in R}}.$$
 }
 
 \Definition{
@@ -78,6 +74,12 @@
     Obviously
 }
 
+\Definition{
+    Inverse
+}{
+    Let $R$ be a binary relation.
+    The inverse of $R$ is the set $$\Inverse{R}=\SetComprehension{z}{z=(x, y) \land  \QuantifierCondition{\exists}{x, y}{(y, x) \in R}}.$$
+}
 \Definition{
     Composition
 }{
