@@ -139,3 +139,60 @@
 }{
     The identity relation on $A$ is defined by $${Id}_{A} = \SetComprehension{(a, b)}{a, b \in A \land a = b}.$$
 }
+
+\Property{}{
+    Let $A$ be a binary relation.
+    \Keywords{\DomainFunction{dom}{R}} and \Keywords{\DomainFunction{ran}{R}} exist.
+}{
+    $(x, y) \in R$ implies $x, y \in \bigcup(\bigcup R)$.
+}
+\Property{}{
+    \Keywords{$\Inverse{R}$} exist.
+}{
+    $\Inverse{R}$ $\subseteq$ $\CartesianProduct{\DomainFunction{dom}{R}}{\DomainFunction{ran}{R}}$.
+}
+\Property{}{
+    \Keywords{$\Compose{S}{R}$} exist.
+}{
+    $\Compose{S}{R}$ $\subseteq$ $\CartesianProduct{\DomainFunction{dom}{R}}{\DomainFunction{ran}{S}}$.
+}
+\Property{}{
+    \Keywords{$\CartesianProduct{\CartesianProduct{A}{B}}{C}$} exist.
+}{
+    $\CartesianProduct{\CartesianProduct{A}{B}}{C}$ $\subseteq$ $\Powerset{\Powerset{\Powerset{\Set{a, b, c}}}}$.
+}
+
+\Property{}{
+    Let $R$ be a binary relation and $A$ and $B$ sets.
+    \List{enumerate}{
+        \item{
+            $R[A \cup B]$ $=$ $R[A] \cup R[B]$
+        }
+        \item{
+            $R[A \cap B]$ $\subseteq$ $R[A] \cap R[B]$
+        }
+        \item{
+            $R[A - B]$ $\supseteq$ $R[A] - R[B]$
+        }
+        \item{
+            $\Inverse{R}[A \cup B]$ $=$ $\Inverse{R}[A] \cup \Inverse{R}[B]$
+        }
+        \item{
+            $\Inverse{R}[A \cap B]$ $\subseteq$ $\Inverse{R}[A] \cap \Inverse{R}[B]$
+        }
+        \item{
+            $\Inverse{R}[A - B]$ $\supseteq$ $\Inverse{R}[A] - \Inverse{R}[B]$
+        }
+        \item{
+            $\Inverse{R}[A - B]$ $\supseteq$ $\Inverse{R}[A] - \Inverse{R}[B]$
+        }
+        \item{
+            $\Inverse{R}[R[A]]$ $\supseteq$ $A \cap \DomainFunction{dom}{R}$
+        }
+        \item{
+            $R[\Inverse{R}[B]]$ $\supseteq$ $B \cap \DomainFunction{ran}{R}$
+        }
+    }
+}{
+    Obviously.
+}
