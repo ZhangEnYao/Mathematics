@@ -26,29 +26,29 @@
     Domain
 }{
     Let $A$ be a binary relation.
-    The set of all $x$ which are in relation $A$ with some $y$ is called the domain of $R$ and denoted by $\DomainFunction{dom}{R}$.
+    The set of all $x$ which are in relation $A$ with some $y$ is called the domain of $R$ and denoted by $\domain{R}$.
 }
 \Note{
-    $\DomainFunction{dom}{R}$ is the set of all first coordinates of ordered pairs in $R$.
+    $\domain{R}$ is the set of all first coordinates of ordered pairs in $R$.
 }
 \Definition{
     Range
 }{
     Let $A$ be a binary relation.
-    The set of all $y$ such that, for some $x$, $x$ is in relation $R$ with $y$ is called the range of $A$, denoted by $\DomainFunction{ran}{R}$.
+    The set of all $y$ such that, for some $x$, $x$ is in relation $R$ with $y$ is called the range of $A$, denoted by $\range{R}$.
 }
 \Note{
-    $\DomainFunction{ran}{R}$ is the set of all second coordinates of ordered pairs in $R$.
+    $\range{R}$ is the set of all second coordinates of ordered pairs in $R$.
 }
 \Definition{
     Field
 }{
     Let $A$ be a binary relation.
-    The set $\DomainFunction{dom}{R}$ $\cup$ $\DomainFunction{ran}{R}$ is called the field of $R$ and is denoted by $\DomainFunction{field}{R}$.
-    If $\DomainFunction{field}{R}$ $\subseteq$ $X$, we say that $R$ is a relation in $X$ or that $R$ is a relation between elements of $X$.
+    The set $\domain{R}$ $\cup$ $\range{R}$ is called the field of $R$ and is denoted by $\field{R}$.
+    If $\field{R}$ $\subseteq$ $X$, we say that $R$ is a relation in $X$ or that $R$ is a relation between elements of $X$.
 }
 \Proposition{}{
-    Both \Keywords{$\DomainFunction{dom}{R}$} and \Keywords{$\DomainFunction{ran}{R}$} \Keywords{exist} for any relation $R$.
+    Both \Keywords{$\domain{R}$} and \Keywords{$\range{R}$} \Keywords{exist} for any relation $R$.
 }{
     Obviously.
 }
@@ -64,7 +64,7 @@
     The inverse image of $B$ under $R$ is the set of all $x$ from the domain of $R$ related in $R$ to some element of $B$; it is denoted by $\Inverse{R}[A]$.
 }
 \Proposition{}{
-    \Keywords{$\DomainFunction{dom}{R}$} $=$ \Keywords{$\DomainFunction{ran}{\Inverse{R}}$}.
+    \Keywords{$\domain{R}$} $=$ \Keywords{$\range{\Inverse{R}}$}.
 }{
     Obviously
 }
@@ -85,33 +85,33 @@
 }{
     Let $R$ and $S$ be binary relations.
     The composition of $R$ and $S$ is the relation.
-    $$ \Compose{S}{R} = \SetComprehension{(x, z)}{\QuantifierCondition{\exists}{y}{(x, y) \in R \land (y, z) \in S}}.$$
+    $$ S \composition R = \SetComprehension{(x, z)}{\QuantifierCondition{\exists}{y}{(x, y) \in R \land (y, z) \in S}}.$$
 }
 \Note{
-    $(x, z)$ $\in$ $\Compose{S}{R}$ means that for some $y$, $(x, y) \in R$ and $(y, z) \in S$.
+    $(x, z)$ $\in$ $S \composition R$ means that for some $y$, $(x, y) \in R$ and $(y, z) \in S$.
 }
 
 \Definition{
     Cartesian Product
 }{
     Let $A$ and $B$ be sets.
-    The set of all ordered pairs whose first coordinate is from $A$ and whose second coordinate is from $B$ is called the cartesian product of $A$ and $B$ and denoted $\CartesianProduct{A}{B}$.
+    The set of all ordered pairs whose first coordinate is from $A$ and whose second coordinate is from $B$ is called the cartesian product of $A$ and $B$ and denoted $A \cartesianproduct B$.
 }
 \Note{
-    $\CartesianProduct{A}{B}$ is a relation in which every element of $A$ is related to every element of $B$.
+    $A \cartesianproduct B$ is a relation in which every element of $A$ is related to every element of $B$.
 }
 \Proposition{}{
-    \Keywords{$\CartesianProduct{A}{B}$ exists}.
+    \Keywords{$A \cartesianproduct B$ exists}.
 }{
-    $\CartesianProduct{A}{B} = \SetComprehension{w \in \Powerset{\Powerset{\Set{a, b}}}}{w = (a, b) \land \QuantifierCondition{\exists}{a, b}{a \in A \land b \in B}}.$
+    $A \cartesianproduct B = \SetComprehension{w \in \Powerset{\Powerset{\Set{a, b}}}}{w = (a, b) \land \QuantifierCondition{\exists}{a, b}{a \in A \land b \in B}}.$
 }
 \Proposition{}{
-    $\CartesianProduct{(\CartesianProduct{A}{B})}{C}$ $=$ $\CartesianProduct{\CartesianProduct{A}{B}}{C}$.
+    $(A \cartesianproduct B) \cartesianproduct C$ $=$ $A \cartesianproduct B \cartesianproduct C$.
 }{
     Obviously.
 }
 \Note{
-    $\CartesianProduct{\CartesianProduct{A}{B}}{C} = \SetComprehension{(a, b, c)}{a \in A \land b \in B \land c \in C}.$
+    $A \cartesianproduct B \cartesianproduct C = \SetComprehension{(a, b, c)}{a \in A \land b \in B \land c \in C}.$
 }
 
 \Definition{
@@ -137,60 +137,128 @@
 \Definition{
     Identity Relation
 }{
-    The identity relation on $A$ is defined by $${Id}_{A} = \SetComprehension{(a, b)}{a, b \in A \land a = b}.$$
+    The identity relation on $A$ is defined by $${\identityrelation}_{A} = \SetComprehension{(a, b)}{a, b \in A \land a = b}.$$
 }
 
 \Property{}{
     Let $A$ be a binary relation.
-    \Keywords{\DomainFunction{dom}{R}} and \Keywords{\DomainFunction{ran}{R}} exist.
+    \Keywords{$\domain{R}$} and \Keywords{$\range{R}$} \Keywords{exist}.
 }{
     $(x, y) \in R$ implies $x, y \in \bigcup(\bigcup R)$.
 }
-\Property{}{
-    \Keywords{$\Inverse{R}$} exist.
-}{
-    $\Inverse{R}$ $\subseteq$ $\CartesianProduct{\DomainFunction{dom}{R}}{\DomainFunction{ran}{R}}$.
+\Remark{
+    Union flatten a set. Powerset structure a set.
 }
 \Property{}{
-    \Keywords{$\Compose{S}{R}$} exist.
+    \Keywords{$\Inverse{R}$} \Keywords{exist}.
 }{
-    $\Compose{S}{R}$ $\subseteq$ $\CartesianProduct{\DomainFunction{dom}{R}}{\DomainFunction{ran}{S}}$.
+    $\Inverse{R}$ $\subseteq$ $\domain{R} \cartesianproduct \range{R}$.
 }
 \Property{}{
-    \Keywords{$\CartesianProduct{\CartesianProduct{A}{B}}{C}$} exist.
+    \Keywords{$S \composition R$} \Keywords{exist}.
 }{
-    $\CartesianProduct{\CartesianProduct{A}{B}}{C}$ $\subseteq$ $\Powerset{\Powerset{\Powerset{\Set{a, b, c}}}}$.
+    $S \composition R$ $\subseteq$ $\domain{R} \cartesianproduct \range{S}$.
+}
+\Property{}{
+    For any three binary relations $R$, $S$, and $T$,
+    \Keywords{$T \composition (S \composition R)$ $=$ $(T \composition S) \composition R$}.
+}{
+    $S \composition R$ $\subseteq$ $\domain{R} \cartesianproduct \range{S}$.
+}
+\Property{}{
+    \Keywords{$A \cartesianproduct B \cartesianproduct C$} \Keywords{exist}.
+}{
+    Obviously.
 }
 
 \Property{}{
     Let $R$ be a binary relation and $A$ and $B$ sets.
     \List{enumerate}{
         \item{
-            $R[A \cup B]$ $=$ $R[A] \cup R[B]$
+            \Keywords{$R[A \cup B]$ $=$ $R[A] \cup R[B]$}
         }
         \item{
-            $R[A \cap B]$ $\subseteq$ $R[A] \cap R[B]$
+            \Keywords{$R[A \cap B]$ $\subseteq$ $R[A] \cap R[B]$}
         }
         \item{
-            $R[A - B]$ $\supseteq$ $R[A] - R[B]$
+            \Keywords{$R[A - B]$ $\supseteq$ $R[A] - R[B]$}
         }
         \item{
-            $\Inverse{R}[A \cup B]$ $=$ $\Inverse{R}[A] \cup \Inverse{R}[B]$
+            \Keywords{$\Inverse{R}[A \cup B]$ $=$ $\Inverse{R}[A] \cup \Inverse{R}[B]$}
         }
         \item{
-            $\Inverse{R}[A \cap B]$ $\subseteq$ $\Inverse{R}[A] \cap \Inverse{R}[B]$
+            \Keywords{$\Inverse{R}[A \cap B]$ $\subseteq$ $\Inverse{R}[A] \cap \Inverse{R}[B]$}
         }
         \item{
-            $\Inverse{R}[A - B]$ $\supseteq$ $\Inverse{R}[A] - \Inverse{R}[B]$
+            \Keywords{$\Inverse{R}[A - B]$ $\supseteq$ $\Inverse{R}[A] - \Inverse{R}[B]$}
         }
         \item{
-            $\Inverse{R}[A - B]$ $\supseteq$ $\Inverse{R}[A] - \Inverse{R}[B]$
+            \Keywords{$\Inverse{R}[A - B]$ $\supseteq$ $\Inverse{R}[A] - \Inverse{R}[B]$}
         }
         \item{
-            $\Inverse{R}[R[A]]$ $\supseteq$ $A \cap \DomainFunction{dom}{R}$
+            \Keywords{$\Inverse{R}[R[A]]$ $\supseteq$ $A \cap \domain{R}$}
         }
         \item{
-            $R[\Inverse{R}[B]]$ $\supseteq$ $B \cap \DomainFunction{ran}{R}$
+            \Keywords{$R[\Inverse{R}[B]]$ $\supseteq$ $B \cap \range{R}$}
+        }
+    }
+}{
+    Obviously.
+}
+
+\Property{}{
+    Let $R$ $\subseteq$ $X \cartesianproduct Y$.
+    \List{enumerate}{
+        \item{
+            \Keywords{$R[X]$ $=$ $\range{R}$}.
+        }
+        \item{
+            \Keywords{$\Inverse{R}[X]$ $=$ $\domain{R}$}.
+        }
+        \item{
+            If $a$ $\not \in$ $\domain{R}$,
+            \Keywords{$R[\Set{a}]$ $=$ $\emptyset$}.
+        }
+        \item{
+            If $b$ $\not \in$ $\range{R}$,
+            \Keywords{$\Inverse{R}[\Set{b}]$ $=$ $\emptyset$}.
+        }
+        \item{
+            \Keywords{$\domain{R}$ $=$ $\range{\Inverse{R}}$}.
+        }
+        \item{
+            \Keywords{$\range{R}$ $=$ $\domain{\Inverse{R}}$}.
+        }
+        \item{
+            \Keywords{$\Inverse{(\Inverse{R})}$ $=$ $R$}.
+        }
+        \item{
+            \Keywords{$\Inverse{R} \composition R$ $\supseteq$ ${\identityrelation}_{\domain{R}}$}.
+        }
+        \item{
+            \Keywords{$R \composition \Inverse{R}$ $\supseteq$ ${\identityrelation}_{\range{R}}$}.
+        }
+    }
+}{
+    Obviously.
+}
+
+\Property{}{
+    \List{enumerate}{
+        \item{
+            \Keywords{$A \cartesianproduct B$ $=$ $\emptyset$} if and only if \Keywords{$A$ $=$ $\emptyset$} or \Keywords{$B$ $=$ $\emptyset$}.
+        }
+        \item{
+            \Keywords{$(A_{1} \cup A_{2}) \cartesianproduct B$ $=$ $(A_{1} \cartesianproduct B) \cup (A_{2} \cartesianproduct B)$}.
+        }
+        \item{
+            \Keywords{$(A_{1} \cap A_{2}) \cartesianproduct B$ $=$ $(A_{1} \cartesianproduct B) \cap (A_{2} \cartesianproduct B)$}.
+        }
+        \item{
+            \Keywords{$(A_{1} - A_{2}) \cartesianproduct B$ $=$ $(A_{1} \cartesianproduct B) - (A_{2} \cartesianproduct B)$}.
+        }
+        \item{
+            \Keywords{$(A_{1} \symmetricdifference A_{2}) \cartesianproduct B$ $=$ $(A_{1} \cartesianproduct B) \symmetricdifference (A_{2} \cartesianproduct B)$}.
         }
     }
 }{

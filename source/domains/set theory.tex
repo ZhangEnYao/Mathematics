@@ -1,31 +1,23 @@
-\NewDocumentCommand{\DomainFunction}{ m m }{%
-	\text{\normalfont{#1}{\thinspace}}{#2}%
-}
+\DeclareMathOperator{\identityrelation}{Id}
+\DeclareMathOperator{\domain}{dom}
+\DeclareMathOperator{\range}{ran}
+\DeclareMathOperator{\field}{field}
+\DeclareMathOperator{\symmetricdifference}{\triangle}
+\DeclareMathOperator{\cartesianproduct}{\times}
+\DeclareMathOperator{\composition}{\circ}
 
 \NewDocumentCommand{\SetComprehension}{ m m }{%
 	\{\thinspace{#1}\ \vert\ {#2}\thinspace\}%
 }
-
 \NewDocumentCommand{\QuantifierCondition}{ m m m }{%
 	{#1}\thinspace{#2}\thinspace\big({#3})%
 }
-
 \NewDocumentCommand{\Set}{ m }{%
 	\{{#1}\}%
 }
-
 \NewDocumentCommand{\Inverse}{ m }{%
 	{#1}^{-1}%
 }
-
 \NewDocumentCommand{\Powerset}{ m }{%
 	\mathcal{P}({#1})%
-}
-
-\NewDocumentCommand{\CartesianProduct}{ m m }{%
-	{#1} \times {#2}%
-}
-
-\NewDocumentCommand{\Compose}{ m m }{%
-	{#1} \circ {#2}%
 }
