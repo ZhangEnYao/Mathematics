@@ -1,0 +1,149 @@
+\Notion{
+    Summary
+}{
+    Binary Relation Structures: Domain, Range, Field, Image.\\
+    Binary Relation Operators: Inverse, Composition, Cartesian Product,\\
+    Binary Relation Instances: Membership Relation, Identity Relation.\\
+    Binary Relation Generalizations: Unary Relation, Ternary Relation.\\
+}
+
+\Definition{
+    Function
+}{
+    A binary relation $F$ is a function if and only if for every $a$ from $\domain{F}$ there is exactly one $b$ such that $a F b$.
+    This unique $b$ is called the value of $F$ at $a$.
+    $F(a)$ is not defined if $a$ $\not\in$ $domain{F}$.
+}
+\Note{
+    A binary relation $F$ is called a function (or mapping, correspondence) if $a F b_{1}$ and $a F b_{2}$ imply $b_{1}$ $=$ $b_{2}$ for any $a$, $b_{1}$, and $b_{2}$.
+}
+\Note{
+    Function is a procedure, a rule, assigning to any object $a$ from the domain of the function a unique object $b$, the value of the function at $a$.
+}
+\Note{
+    A function represents a special type of relation, a relation where every object $a$ from the domain is related to precisely one object in the range, namely, to the value of the function at $a$.
+}
+
+\Proposition{}{
+    Let $F$ and $G$ be functions.
+    $F$ $=$ $G$ if and only if $\domain{F}$ $=$ $\domain{G}$ and $F(x)$ $=$ $G(x)$ for all $x$  $\in$ $\domain{F}$.
+}{
+    The Axiom of Extensionality.
+}
+
+\Definition{}{
+    Let $F$ be a function and $A$ and $B$ sets.
+    \List{enumerate}{
+        \item{
+            $F$ is a function on $A$ if $\domain{F}$ $=$ $A$.
+        }
+        \item{
+            $F$ is a function into $B$ if $\range{F}$ $\subseteq$ $B$.
+        }
+        \item{
+            $F$ is a function onto $B$ if $\range{F}$ $=$ $B$.
+        }
+        \item{
+            The restriction of the function $F$ to $A$ is the function $F \restriction A$ $=$ $\SetComprehension{(a,b) \in F}{a \in A}$.
+        }
+        \item{
+            If $G$ is a restriction of $F$ to some $A$, we say that $F$ is an extension of $G$.
+        }
+    }
+}
+\Note{
+    Concepts of domain, range, image, inverse image, inverse, and composition can be applied to functions.
+}
+
+\Proposition{}{
+    Let $f$ and $g$ be functions.
+    Then $g {\composition} f$ is a function, $g {\composition} f$ is defined at $x$ if and only if $f$ is defined at $x$ and $g$ is defined at $f(x)$.
+    \List{enumerate}{
+        \item{
+            $\domain{(g {\composition} f)}$ $=$ $\domain{f} \cap  \Inverse{f}[\domain{g}]$.
+        }
+        \item{
+            $(g {\composition} f)(x)$ $=$ $g(f(x))$ for all $x$ $\in$ $\domain(g {\composition} f)$.
+        }
+    }
+}{
+    Obviously.
+}
+
+\Definition{
+    Invertiable
+}{
+    A function $f$ is invertible if $\Inverse{f}$ is a function.
+}
+\Proposition{}{
+    If $f$ is a function, its inverse $\Inverse{f}$ is a relation, but it may not be a function.
+}{
+    Obviously.
+}
+
+\Definition{}{
+    A function $f$ is called one-to-one or injective if $a_{1}$ $\in$ $\domain{f}$, $a_{2}$ $\in$ $\domain{f}$, and $a_{1}$ $\neq$ $a_{2}$ implies $f(a_{1})$ $\neq$ $f(a_{2})$.
+    In other words if $a_{1}$ $\in$ $\domain{f}$, $a_{2}$ $\in$ $\domain{f}$, and $f(a_{1})$ $=$ $f(a_{2})$ implies $a_{1}$ $=$ $a_{2}$·
+}
+\Note{
+    A one-to-one function attains different values for different elements from its domain.
+}
+\Proposition{}{
+    A function is invertible if and only if it is one-to-one.
+}{
+    Let $f$ be invertible; then $\Inverse{f}$ is a function.
+}
+\Proposition{}{
+    If $f$ is invertible, then $\Inverse{f}$ is also invertible.
+}{
+    $\Inverse{(\Inverse{f})}$ $=$ $f$.
+}
+
+\Definition{}{
+    Function $f$ and $g$ are called compatible if $f(x)$ $=$ $g(x)$ for all $x$ $\in$ $\domain{f} \cap \domain{g}$.
+}
+\Definition{}{
+    A set of functions $F$ is called a compatible system of functions if any two functions $f$ and $g$ from $F$ are compatible.
+}
+\Proposition{}{
+    Functions $f$ and $g$ are compatible if and only if $f \cup g$ is a function.
+    Functions $f$ and $g$ are compatible if and only if $f \restriction (\domain{f} \cap \domain{g})$ $=$ $g \restriction (\domain{f} \cap \domain{g})$.
+}{
+    Obviously.
+}
+
+\Theorem{}{
+    If $F$ is a compatible system of functions, the $\bigcup F$ is a function with $\domain(\bigcup F)$ $=$ $\bigcup\SetComprehension{\domain{f}}{f \in F}$.
+    The function $\bigcup F$ extends all $f \in F$.
+}{
+    Obviously.
+}
+
+\Definition{}{
+    Let $A$ and $B$ be sets.
+    The set of all functions on $A$ into $B$ is denoted $B^{A}$. 
+}
+\Proposition{}{
+    $B^{A}$ exists.
+}{
+    $B^{A}$ $\subseteq$ $\Powerset{A \cartesianproduct B}$.
+}
+
+\Definition{
+    Indexed System of Sets
+}{
+    Let $S$ $=$ $\FunctionComprehension{S_{i}}{i \in I}$ be a function with domain $I$, the values $S_{i}$ are arbitrary sets.
+    We call the function $\FunctionComprehension{S_{i}}{i \in I}$ an indexed system of sets, whenever we wish to stress that the values of $S$ are sets.
+}
+
+\Definition{
+    Product of the Indexed System
+}{
+    Let $S$ $=$ $\FunctionComprehension{S_{i}}{i \in I}$ and $f$ be a function on $I$.
+    $\prod S$ $=$ $\SetComprehension{f}{\QuantifierCondition{\forall}{i \in I}{f_{i} \in S_{i}}}$
+}
+\Proposition{}{
+    $\prod_{i \in I} S_i$ exists.
+}{
+    $\prod_{i \in I} S_{i}$ $\subseteq$ $\Powerset{(I \cartesianproduct \bigcup_{i \in I} S_{i})}$
+}

@@ -9,6 +9,9 @@
 \NewDocumentCommand{\SetComprehension}{ m m }{%
 	\{\thinspace{#1}\ \vert\ {#2}\thinspace\}%
 }
+\NewDocumentCommand{\FunctionComprehension}{ m m }{%
+	\langle \thinspace{#1}\ \vert\ {#2}\thinspace \rangle%
+}
 \NewDocumentCommand{\QuantifierCondition}{ m m m }{%
 	{#1}\thinspace{#2}\thinspace\big({#3})%
 }
