@@ -15,18 +15,18 @@
     $F(a)$ is not defined if $a$ $\not\in$ $domain{F}$.
 }
 \Note{
-    A binary relation $F$ is called a \Keywords{function} (or \Keywords{mapping}, \Keywords{correspondence}) if \Keywords{$a F b_{1}$ and $a F b_{2}$} imply \Keywords{$b_{1}$ $=$ $b_{2}$} for any $a$, $b_{1}$, and $b_{2}$.
+    A binary relation $F$ is called a \Keywords{function} (or \Keywords{mapping}, \Keywords{correspondence}) if \Keywords{$a F b_{1}$ and $a F b_{2}$ imply $b_{1}$ $=$ $b_{2}$} for any $a$, $b_{1}$, and $b_{2}$.
 }
 \Note{
-    \Keywords{Function} is a \Keywords{procedure}, a \Keywords{rule}, \Keywords{assigning to any object $a$ from the domain of the function a unique object $b$, the value of the function at $a$}.
+    \Keywords{Function} is a \Keywords{procedure}, a \Keywords{rule}, \Keywords{assigning} to \Keywords{any object $a$ from the domain of the function} \Keywords{a unique object $b$, the value of the function at $a$}.
 }
 \Note{
-    A \Keywords{function} represents a special type of \Keywords{relation}, a relation where every \Keywords{object $a$ from the domain} is related to precisely \Keywords{one object in the range}, namely, to the value of the function at $a$.
+    A \Keywords{function} represents \Keywords{a special type of relation}, a relation where every \Keywords{object $a$ from the domain} is \Keywords{related to} precisely \Keywords{one object in the range}, namely, to \Keywords{the value of the function at $a$}.
 }
 
 \Proposition{}{
     Let $F$ and $G$ be functions.
-    \Keywords{$F$ $=$ $G$} if and only if \Keywords{$\domain{F}$ $=$ $\domain{G}$} and \Keywords{$F(x)$ $=$ $G(x)$} for all $x$  $\in$ $\domain{F}$.
+    \Keywords{$F$ $=$ $G$} if and only if \Keywords{$\domain{F}$ $=$ $\domain{G}$ and $F(x)$ $=$ $G(x)$} for all $x$  $\in$ $\domain{F}$.
 }{
     The Axiom of Extensionality.
 }
@@ -57,13 +57,13 @@
 
 \Proposition{}{
     Let $f$ and $g$ be functions.
-    Then \Keywords{$g {\composition} f$ is a function}, \Keywords{$g {\composition} f$ is defined at $x$ if and only if $f$ is defined at $x$ and $g$ is defined at $f(x)$}.
+    Then \Keywords{$g {\composition} f$ is a function}, \Keywords{$g {\composition} f$ is defined at $x$} if and only if \Keywords{$f$ is defined at $x$ and $g$ is defined at $f(x)$}.
     \List{enumerate}{
         \item{
             \Keywords{$\domain{(g {\composition} f)}$ $=$ $\domain{f} \cap  \Inverse{f}[\domain{g}]$}.
         }
         \item{
-            \Keywords{$(g {\composition} f)(x)$ $=$ $g(f(x))$ for all $x$ $\in$ $\domain(g {\composition} f)$}.
+            \Keywords{$(g {\composition} f)(x)$ $=$ $g(f(x))$} for all $x$ $\in$ $\domain(g {\composition} f)$.
         }
     }
 }{
@@ -76,7 +76,7 @@
     A function $f$ is invertible if $\Inverse{f}$ is a function.
 }
 \Proposition{}{
-    If $f$ is a function, its \Keywords{inverse} $\Inverse{f}$ is a \Keywords{relation}, but it may not be a function.
+    If $f$ is a function, its \Keywords{inverse $\Inverse{f}$ is a relation}, but it \Keywords{may not be a function}.
 }{
     Obviously.
 }
@@ -106,15 +106,15 @@
     A set of functions $F$ is called a compatible system of functions if any two functions $f$ and $g$ from $F$ are compatible.
 }
 \Proposition{}{
-    Functions $f$ and $g$ are compatible if and only if $f \cup g$ is a function.
-    Functions $f$ and $g$ are compatible if and only if $f \restriction (\domain{f} \cap \domain{g})$ $=$ $g \restriction (\domain{f} \cap \domain{g})$.
+    Functions \Keywords{$f$ and $g$ are compatible} if and only if \Keywords{$f \cup g$ is a function}.
+    Functions \Keywords{$f$ and $g$ are compatible} if and only if \Keywords{$f \restriction (\domain{f} \cap \domain{g})$ $=$ $g \restriction (\domain{f} \cap \domain{g})$}.
 }{
     Obviously.
 }
 
 \Theorem{}{
-    If $F$ is a \Keywords{compatible system of functions}, the $\bigcup F$ is a function with $\domain(\bigcup F)$ $=$ $\bigcup\SetComprehension{\domain{f}}{f \in F}$.
-    The function $\bigcup F$ \Keywords{extends} all $f \in F$.
+    If $F$ is a \Keywords{compatible system of functions}, the $\bigcup F$ is a \Keywords{function} with \Keywords{$\domain(\bigcup F)$ $=$ $\bigcup\SetComprehension{\domain{f}}{f \in F}$}.
+    The function $\bigcup F$ \Keywords{extends all $f \in F$}.
 }{
     Obviously.
 }
@@ -135,6 +135,23 @@
     Let $S$ $=$ $\FunctionComprehension{S_{i}}{i \in I}$ be a function with domain $I$, the values $S_{i}$ are arbitrary sets.
     We call the function $\FunctionComprehension{S_{i}}{i \in I}$ an indexed system of sets, whenever we wish to stress that the values of $S$ are sets.
 }
+\Definition{
+    be Indexed by
+}{
+    $A$ $=$ $\SetComprehension{S_{i}}{i \in I}$ $=$ $\range{S}$, where $S$ is a function on $I$.
+}
+\Proposition{}{
+    $\bigcup{A}$ and $\bigcap{A}$ were defined for any system of sets $A$($A$ $\neq$ $\emptyset$ in case of intersection).
+    $\bigcup{A}$ $=$ $\bigcup{\SetComprehension{S_{i}}{i \in I}}$ $=$ $\underset{i \in I}{\bigcup}S_{i}$;
+    $\bigcap{A}$ $=$ $\bigcap{\SetComprehension{S_{i}}{i \in I}}$ $=$ $\underset{i \in I}{\bigcap}S_{i}$.
+}{
+    Obviously.
+}
+\Property{}{
+    Every system of sets $A$ can be indexed by a function.
+}{
+    Obviously.
+}
 
 \Definition{
     Product of the Indexed System
@@ -146,4 +163,13 @@
     \Keywords{$\prod_{i \in I} S_i$ exists}.
 }{
     $\prod_{i \in I} S_{i}$ $\subseteq$ $\Powerset{(I \cartesianproduct \bigcup_{i \in I} S_{i})}$
+}
+
+\Definition{
+    Exponentiation of Sets
+}{
+    If the indexed system $S$ is such that $S_{i} = B$ for all $i \in I$, then $\prod_{i \in I} S_{i}$ $=$ $B^{I}$
+}
+\Note{
+    The "exponentiation" of sets is related to "multiplication" of sets in the same way as similar operations on numbers are related.
 }
