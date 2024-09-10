@@ -1,10 +1,10 @@
 \Notion{
     Summary
 }{
-    Binary Relation Structures: Domain, Range, Field, Image.\\
-    Binary Relation Operators: Inverse, Composition, Cartesian Product,\\
-    Binary Relation Instances: Membership Relation, Identity Relation.\\
-    Binary Relation Generalizations: Unary Relation, Ternary Relation.\\
+    Function Structures: Domain, Range, Restriction, Extension.\\
+    Function Operators: Equivalent, Inverse, Composition.\\
+    Function Instances: Injective, Invertable, Compatible.\\
+    Function Generalizations: Index System of Sets.\\
 }
 
 \Definition{
@@ -15,18 +15,18 @@
     $F(a)$ is not defined if $a$ $\not\in$ $domain{F}$.
 }
 \Note{
-    A binary relation $F$ is called a function (or mapping, correspondence) if $a F b_{1}$ and $a F b_{2}$ imply $b_{1}$ $=$ $b_{2}$ for any $a$, $b_{1}$, and $b_{2}$.
+    A binary relation $F$ is called a \Keywords{function} (or \Keywords{mapping}, \Keywords{correspondence}) if \Keywords{$a F b_{1}$ and $a F b_{2}$} imply \Keywords{$b_{1}$ $=$ $b_{2}$} for any $a$, $b_{1}$, and $b_{2}$.
 }
 \Note{
-    Function is a procedure, a rule, assigning to any object $a$ from the domain of the function a unique object $b$, the value of the function at $a$.
+    \Keywords{Function} is a \Keywords{procedure}, a \Keywords{rule}, \Keywords{assigning to any object $a$ from the domain of the function a unique object $b$, the value of the function at $a$}.
 }
 \Note{
-    A function represents a special type of relation, a relation where every object $a$ from the domain is related to precisely one object in the range, namely, to the value of the function at $a$.
+    A \Keywords{function} represents a special type of \Keywords{relation}, a relation where every \Keywords{object $a$ from the domain} is related to precisely \Keywords{one object in the range}, namely, to the value of the function at $a$.
 }
 
 \Proposition{}{
     Let $F$ and $G$ be functions.
-    $F$ $=$ $G$ if and only if $\domain{F}$ $=$ $\domain{G}$ and $F(x)$ $=$ $G(x)$ for all $x$  $\in$ $\domain{F}$.
+    \Keywords{$F$ $=$ $G$} if and only if \Keywords{$\domain{F}$ $=$ $\domain{G}$} and \Keywords{$F(x)$ $=$ $G(x)$} for all $x$  $\in$ $\domain{F}$.
 }{
     The Axiom of Extensionality.
 }
@@ -57,13 +57,13 @@
 
 \Proposition{}{
     Let $f$ and $g$ be functions.
-    Then $g {\composition} f$ is a function, $g {\composition} f$ is defined at $x$ if and only if $f$ is defined at $x$ and $g$ is defined at $f(x)$.
+    Then \Keywords{$g {\composition} f$ is a function}, \Keywords{$g {\composition} f$ is defined at $x$ if and only if $f$ is defined at $x$ and $g$ is defined at $f(x)$}.
     \List{enumerate}{
         \item{
-            $\domain{(g {\composition} f)}$ $=$ $\domain{f} \cap  \Inverse{f}[\domain{g}]$.
+            \Keywords{$\domain{(g {\composition} f)}$ $=$ $\domain{f} \cap  \Inverse{f}[\domain{g}]$}.
         }
         \item{
-            $(g {\composition} f)(x)$ $=$ $g(f(x))$ for all $x$ $\in$ $\domain(g {\composition} f)$.
+            \Keywords{$(g {\composition} f)(x)$ $=$ $g(f(x))$ for all $x$ $\in$ $\domain(g {\composition} f)$}.
         }
     }
 }{
@@ -76,7 +76,7 @@
     A function $f$ is invertible if $\Inverse{f}$ is a function.
 }
 \Proposition{}{
-    If $f$ is a function, its inverse $\Inverse{f}$ is a relation, but it may not be a function.
+    If $f$ is a function, its \Keywords{inverse} $\Inverse{f}$ is a \Keywords{relation}, but it may not be a function.
 }{
     Obviously.
 }
@@ -89,12 +89,12 @@
     A one-to-one function attains different values for different elements from its domain.
 }
 \Proposition{}{
-    A function is invertible if and only if it is one-to-one.
+    A function is \Keywords{invertible} if and only if it is \Keywords{one-to-one}.
 }{
     Let $f$ be invertible; then $\Inverse{f}$ is a function.
 }
 \Proposition{}{
-    If $f$ is invertible, then $\Inverse{f}$ is also invertible.
+    If \Keywords{$f$ is invertible}, then \Keywords{$\Inverse{f}$ is also invertible}.
 }{
     $\Inverse{(\Inverse{f})}$ $=$ $f$.
 }
@@ -113,8 +113,8 @@
 }
 
 \Theorem{}{
-    If $F$ is a compatible system of functions, the $\bigcup F$ is a function with $\domain(\bigcup F)$ $=$ $\bigcup\SetComprehension{\domain{f}}{f \in F}$.
-    The function $\bigcup F$ extends all $f \in F$.
+    If $F$ is a \Keywords{compatible system of functions}, the $\bigcup F$ is a function with $\domain(\bigcup F)$ $=$ $\bigcup\SetComprehension{\domain{f}}{f \in F}$.
+    The function $\bigcup F$ \Keywords{extends} all $f \in F$.
 }{
     Obviously.
 }
@@ -124,7 +124,7 @@
     The set of all functions on $A$ into $B$ is denoted $B^{A}$. 
 }
 \Proposition{}{
-    $B^{A}$ exists.
+    \Keywords{$B^{A}$ exists}.
 }{
     $B^{A}$ $\subseteq$ $\Powerset{A \cartesianproduct B}$.
 }
@@ -143,7 +143,7 @@
     $\prod S$ $=$ $\SetComprehension{f}{\QuantifierCondition{\forall}{i \in I}{f_{i} \in S_{i}}}$
 }
 \Proposition{}{
-    $\prod_{i \in I} S_i$ exists.
+    \Keywords{$\prod_{i \in I} S_i$ exists}.
 }{
     $\prod_{i \in I} S_{i}$ $\subseteq$ $\Powerset{(I \cartesianproduct \bigcup_{i \in I} S_{i})}$
 }
